@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navigation001.css";
 
 function Navigation001() {
-  const [userIsAuthenticated, setuserIsAuthenticated] = useState(false);
   const [sessionTrayIsExpanded, setsessionTrayIsExpanded] = useState(false);
 
   const handleSessionButtonClick = () => {
