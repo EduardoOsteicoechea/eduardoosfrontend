@@ -26,9 +26,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             sudo rm -rf /var/cache/nginx/*
-            sudo rm -r /var/www/html/eduardoos
+            sudo rm -r /var/www/html/eduardoosfrontend
             cd /var/www/html/
-            sudo git clone https://github.com/EduardoOsteicoechea/eduardoos.git
+            sudo git clone https://github.com/EduardoOsteicoechea/eduardoosfrontend.git
             sudo systemctl restart nginx
             sudo systemctl reload nginx 
 
