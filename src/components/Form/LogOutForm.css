@@ -1,0 +1,52 @@
+.LogOutForm
+{
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   max-width: 225px;
+   padding: 20px 15px;
+   background: var(--c2);
+
+}
+.LogOutFormHeading
+{
+   border-radius: 0;
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+   color: var(--c1);
+}
+.LogOutFormEmailInputLabel, .LogOutFormPasswordInputLabel
+{
+   margin-top: 15px;
+   color: var(--c1);
+   border: none;
+   height: var(--itemHeight);
+}
+.LogOutFormEmailInput, .LogOutFormPasswordInput
+{
+   border: none;
+   border-radius: 4px !important;
+   height: var(--itemHeight);
+   padding: 0 10px;
+}
+
+.LogOutFormSubmitButton
+{
+   margin-top: 30px;
+   margin-left: auto;
+   background: var(--c1);
+   color: var(--c2);
+   width: fit-content;
+   padding: 0 20px;
+   border: none;
+   border-radius: 4px !important;
+   height: var(--itemHeight);
+   padding: 0 10px;
+}
+.LogOutFormSubmitButton:disabled
+{
+   background: var(--c7);
+   color: var(--c1);
+   cursor: not-allowed;
+}

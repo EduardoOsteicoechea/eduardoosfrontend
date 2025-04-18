@@ -1,0 +1,52 @@
+.LogInForm
+{
+   display: flex;
+   flex-direction: column;
+   margin: auto;
+   max-width: 225px;
+   padding: 20px 15px;
+   background: var(--c2);
+
+}
+.LogInFormHeading
+{
+   border-radius: 0;
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+   color: var(--c1);
+}
+.LogInFormEmailInputLabel, .LogInFormPasswordInputLabel
+{
+   margin-top: 15px;
+   color: var(--c1);
+   border: none;
+   height: var(--itemHeight);
+}
+.LogInFormEmailInput, .LogInFormPasswordInput
+{
+   border: none;
+   border-radius: 4px !important;
+   height: var(--itemHeight);
+   padding: 0 10px;
+}
+
+.LogInFormSubmitButton
+{
+   margin-top: 30px;
+   margin-left: auto;
+   background: var(--c1);
+   color: var(--c2);
+   width: fit-content;
+   padding: 0 20px;
+   border: none;
+   border-radius: 4px !important;
+   height: var(--itemHeight);
+   padding: 0 10px;
+}
+.LogInFormSubmitButton:disabled
+{
+   background: var(--c7);
+   color: var(--c1);
+   cursor: not-allowed;
+}

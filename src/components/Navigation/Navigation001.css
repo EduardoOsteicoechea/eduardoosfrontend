@@ -1,0 +1,17 @@
+.Navigation001{
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   left:0;
+   top:0;
+   min-height: 100dvw;
+   background: red;
+   padding: 20px;
+   z-index: 10000;
+}
+.Navigation001Ul{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
