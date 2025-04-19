@@ -35,8 +35,9 @@
       height: fit-content;
       min-height: calc(100dvh - var(--headerHeight));
       flex-direction: column;
+      gap: 40px;
       width: 100%;
-      padding: 20px;
+      padding: 40px;
       overflow: hidden;
    }
    .HomeHeroImageContainer{
