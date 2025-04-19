@@ -3,86 +3,103 @@
    font-family: f1t;
    src: url(/Raleway/Raleway-Thin.ttf );
 }
+
 @font-face
 {
    font-family: f1ti;
    src: url(/Raleway/Raleway-ThinItalic.ttf );
 }
+
 @font-face
 {
    font-family: f1el;
    src: url(/Raleway/Raleway-ExtraLight.ttf );
 }
+
 @font-face
 {
    font-family: f1eli;
    src: url(/Raleway/Raleway-ExtraLightItalic.ttf);
 }
+
 @font-face
 {
    font-family: f1l;
    src: url(/Raleway/Raleway-Light.ttf );
 }
+
 @font-face
 {
    font-family: f1li;
    src: url(/Raleway/Raleway-LightItalic.ttf );
 }
+
 @font-face
 {
    font-family: f1m;
    src: url(/Raleway/Raleway-Medium.ttf );
 }
+
 @font-face
 {
    font-family: f1mi;
    src: url(/Raleway/Raleway-MediumItalic.ttf );
 }
+
 @font-face
 {
    font-family: f1r;
    src: url(/Raleway/Raleway-Regular.ttf );
 }
+
 @font-face
 {
    font-family: f1ri;
    src: url(/Raleway/Raleway-RegularItalic.ttf );
 }
+
 @font-face
 {
    font-family: f1sb;
    src: url(/Raleway/Raleway-SemiBold.ttf );
 }
+
 @font-face
 {
    font-family: f1sbi;
    src: url(/Raleway/Raleway-SemiBoldItalic.ttf );
 }
+
 @font-face
 {
    font-family: f1b;
    src: url(/Raleway/Raleway-Bold.ttf );
 }
+
 @font-face
 {
    font-family: f1bi;
    src: url(/Raleway/Raleway-BoldItalic.ttf );
 }
+
 @font-face
 {
    font-family: f1eb;
    src: url(/Raleway/Raleway-ExtraBold.ttf );
 }
+
 @font-face
 {
    font-family: f1ebi;
    src: url(/Raleway/Raleway-ExtraBoldItalic.ttf );
 }
+
 @font-face
 {
    font-family: f1bl;
    src: url(/Raleway/Raleway-Black.ttf );
 }
+
 @font-face
 {
    font-family: f1bli;
@@ -104,22 +121,22 @@
    --tr1: all ease 1000ms;
    --tr2: all ease 200ms;
 
-   --itemHeight : 30px;
+   --itemHeight: 30px;
 
-   --c1:#fff;
-   --c2:#000;
-   --c3:#f0f0f0;
-   --c4:#fafafa;
-   --c5:#777;
-   --c6:#aaa;
-   --c7:#ccc;
-   --c8:#444;
+   --c1: #fff;
+   --c2: #000;
+   --c3: #f0f0f0;
+   --c4: #fafafa;
+   --c5: #777;
+   --c6: #aaa;
+   --c7: #ccc;
+   --c8: #444;
 
-   --navigation_menu_width:300px;
+   --navigation_menu_width: 300px;
    --headerHeight: 50px;
    --homeChatHeight: 400px;
 
-   --br1:9px;
+   --br1: 9px;
 }
 
 *
@@ -147,23 +164,21 @@ body
    /* border: var(--b1); */
 }
 
-ul{
+ul
+{
    list-style: none;
    list-style-type: none;
 }
 
 @media only screen and (max-width: 950px) and (min-width: 621px)
-{
-
-}
+{}
 
 @media only screen and (max-width: 620px)
-{
-   
-}
+{}
 
 @media only screen and (max-width: 350px)
 {
+
    body
    {
       display: block;

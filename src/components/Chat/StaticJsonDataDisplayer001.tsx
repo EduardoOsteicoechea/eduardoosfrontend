@@ -102,7 +102,10 @@ function StaticJsonDataDisplayer001({ url }: StaticJsonDataDisplayer001Props)
          </div>
          <div
          className="StaticJsonDataDisplayer001ButtonsContainer"
-         >
+         >  
+            <h2
+            className="StaticJsonDataDisplayer001ButtonsContainerHeading"
+            >Skills</h2>
             {isDataLoaded ? (
                keySkills?.map((phrase, index) => (
                   <button

@@ -19,7 +19,7 @@ function Header001(){
              className="Header001LogoAnchor">
                <p
                className="Header001LogoText"
-               >eduardoos</p>
+               >Eduardo Osteicoechea</p>
             </Link>
             <button
             className="Header001MenuButton"

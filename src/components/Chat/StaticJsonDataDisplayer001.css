@@ -19,17 +19,24 @@
    width: var(--homeChatHeight);
    flex-shrink: 0;
    padding: 20px 20px;
-   background: var(--c4);
+   background: var(--c2);
 }
 
 .StaticJsonDataDisplayer001TextContainer
 {
-   color: var(--c5);
+   /* color: var(--c5); */
+   color: var(--c1);
+}
+.StaticJsonDataDisplayer001TextContainer > *
+{
+   /* color: var(--c5); */
+   color: var(--c1);
 }
 
 .StaticJsonDataDisplayer001TextContainerRemark
 {
    font-family: f1b;
+   color: var(--c1);
 }
 
 .StaticJsonDataDisplayer001ButtonsContainer
@@ -43,6 +50,7 @@
    overflow-y: auto;
    font-family: f1l;
    background: var(--c3);
+   padding: 0px;
 }
 
 .StaticJsonDataDisplayer001ButtonsContainer::-webkit-scrollbar
@@ -58,6 +66,9 @@
    cursor: pointer;
    font-size: 11px;
 }
+.StaticJsonDataDisplayer001ButtonsContainerHeading{
+   width: 100%;
+}
 
 @media only screen and (max-width: 620px)
 {
@@ -68,6 +79,7 @@
       gap: 30px;
       overflow-y: auto;
       height: auto;
+      padding: 0;
    }
 
    .StaticJsonDataDisplayer001TextContainer
@@ -81,8 +93,8 @@
       overflow-y: auto;
       font-family: f1l;
       width: 100%;
-      /* padding: 20px 20px; */
-      background: var(--c4);
+      padding: 20px 20px;
+      background: var(--c2);
    }
 
    .StaticJsonDataDisplayer001TextContainer
@@ -107,5 +119,9 @@
       padding: 5px;
       cursor: pointer;
       font-size: 11px;
+   }
+   .StaticJsonDataDisplayer001ButtonsContainerHeading{
+      width: 100%;
+      margin-bottom: 20px;
    }
 }
