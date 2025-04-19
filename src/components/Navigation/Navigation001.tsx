@@ -9,13 +9,7 @@ interface Navigation001Props
 
 function Navigation001({ isExpanded }: Navigation001Props)
 {
-   const [sessionTrayIsExpanded, setsessionTrayIsExpanded] = useState(isExpanded);
    const [navigationClasses, setnavigationClasses] = useState("Navigation001");
-
-   const handleSessionButtonClick = () =>
-   {
-      setsessionTrayIsExpanded(!sessionTrayIsExpanded);
-   };
 
    useEffect(() =>
    {

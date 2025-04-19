@@ -1,4 +1,3 @@
-import Chat001 from "../components/Chat/Chat001";
 import StaticJsonDataDisplayer001 from "../components/Chat/StaticJsonDataDisplayer001";
 import "./Home.css"
 
