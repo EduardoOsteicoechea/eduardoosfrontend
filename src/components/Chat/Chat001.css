@@ -1,0 +1,15 @@
+.Chat001OuterContainer{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: var(--homeChatHeight);
+   width: 100%;
+   border-radius: var(--br1);
+}
+
+@media only screen and (max-width: 620px)
+{
+   .Chat001OuterContainer{
+      height: auto;
+   }
+}

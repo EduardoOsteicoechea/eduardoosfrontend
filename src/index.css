@@ -3,103 +3,86 @@
    font-family: f1t;
    src: url(/Raleway/Raleway-Thin.ttf );
 }
-
 @font-face
 {
    font-family: f1ti;
    src: url(/Raleway/Raleway-ThinItalic.ttf );
 }
-
 @font-face
 {
    font-family: f1el;
    src: url(/Raleway/Raleway-ExtraLight.ttf );
 }
-
 @font-face
 {
    font-family: f1eli;
    src: url(/Raleway/Raleway-ExtraLightItalic.ttf);
 }
-
 @font-face
 {
    font-family: f1l;
    src: url(/Raleway/Raleway-Light.ttf );
 }
-
 @font-face
 {
    font-family: f1li;
    src: url(/Raleway/Raleway-LightItalic.ttf );
 }
-
 @font-face
 {
    font-family: f1m;
    src: url(/Raleway/Raleway-Medium.ttf );
 }
-
 @font-face
 {
    font-family: f1mi;
    src: url(/Raleway/Raleway-MediumItalic.ttf );
 }
-
 @font-face
 {
    font-family: f1r;
    src: url(/Raleway/Raleway-Regular.ttf );
 }
-
 @font-face
 {
    font-family: f1ri;
    src: url(/Raleway/Raleway-RegularItalic.ttf );
 }
-
 @font-face
 {
    font-family: f1sb;
    src: url(/Raleway/Raleway-SemiBold.ttf );
 }
-
 @font-face
 {
    font-family: f1sbi;
    src: url(/Raleway/Raleway-SemiBoldItalic.ttf );
 }
-
 @font-face
 {
    font-family: f1b;
    src: url(/Raleway/Raleway-Bold.ttf );
 }
-
 @font-face
 {
    font-family: f1bi;
    src: url(/Raleway/Raleway-BoldItalic.ttf );
 }
-
 @font-face
 {
    font-family: f1eb;
    src: url(/Raleway/Raleway-ExtraBold.ttf );
 }
-
 @font-face
 {
    font-family: f1ebi;
    src: url(/Raleway/Raleway-ExtraBoldItalic.ttf );
 }
-
 @font-face
 {
    font-family: f1bl;
    src: url(/Raleway/Raleway-Black.ttf );
 }
-
 @font-face
 {
    font-family: f1bli;
@@ -133,6 +116,10 @@
    --c8:#444;
 
    --navigation_menu_width:300px;
+   --headerHeight: 50px;
+   --homeChatHeight: 400px;
+
+   --br1:9px;
 }
 
 *
@@ -145,7 +132,7 @@
    transition: var(--tr1);
    color: var(--c2);
    font-family: var(--f1l);
-   border-radius: .2rem;
+   border-radius: 4px;
 }
 
 body
@@ -157,7 +144,7 @@ body
    overflow-x: hidden;
    overflow-y: auto !important;
    margin: auto;
-   border: var(--b1);
+   /* border: var(--b1); */
 }
 
 ul{

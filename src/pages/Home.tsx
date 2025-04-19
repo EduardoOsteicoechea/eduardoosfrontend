@@ -1,5 +1,25 @@
+import Chat001 from "../components/Chat/Chat001";
+import StaticJsonDataDisplayer001 from "../components/Chat/StaticJsonDataDisplayer001";
+import "./Home.css"
+
 function Home() {
-   return <div><h1>Home Page</h1><p>Welcome to the home page!</p></div>;
+
+   return (
+      <header
+      className="HomeHero"
+      >
+         <div
+         className="HomeHeroImageContainer"
+         >
+            <img
+            className="HomeHeroImageImage"
+            src="1920x1920.jpg"
+            height="100%"
+            />
+         </div>
+         <StaticJsonDataDisplayer001 url="static_data/home_profile_presentation.json"/>
+      </header>
+   );
  }
  
  export default Home;

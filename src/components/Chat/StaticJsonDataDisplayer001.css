@@ -1,0 +1,111 @@
+.StaticJsonDataDisplayer001OuterContainer
+{
+   display: flex;
+   gap: 20px;
+   height: var(--homeChatHeight);
+   overflow-y: auto;
+}
+
+.StaticJsonDataDisplayer001TextContainer
+{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   font-size: 14px;
+   line-height: 20px;
+   height: 100%;
+   overflow-y: auto;
+   font-family: f1l;
+   width: var(--homeChatHeight);
+   flex-shrink: 0;
+   padding: 20px 20px;
+   background: var(--c4);
+}
+
+.StaticJsonDataDisplayer001TextContainer
+{
+   color: var(--c5);
+}
+
+.StaticJsonDataDisplayer001TextContainerRemark
+{
+   font-family: f1b;
+}
+
+.StaticJsonDataDisplayer001ButtonsContainer
+{
+   display: flex;
+   flex-wrap: wrap;
+   column-gap: 5px;
+   row-gap: 5px;
+   height: 100%;
+   width: var(--homeChatHeight);
+   overflow-y: auto;
+   font-family: f1l;
+   background: var(--c3);
+}
+
+.StaticJsonDataDisplayer001ButtonsContainer::-webkit-scrollbar
+{
+   visibility: hidden;
+}
+
+.StaticJsonDataDisplayer001ButtonsContainer>button
+{
+   color: var(--c2);
+   background: var(--c1);
+   padding: 5px;
+   cursor: pointer;
+   font-size: 11px;
+}
+
+@media only screen and (max-width: 620px)
+{
+   .StaticJsonDataDisplayer001OuterContainer
+   {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: auto;
+      height: auto;
+   }
+
+   .StaticJsonDataDisplayer001TextContainer
+   {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 14px;
+      line-height: 20px;
+      height: 350px;
+      overflow-y: auto;
+      font-family: f1l;
+      width: 100%;
+      padding: 20px 20px;
+      background: var(--c4);
+   }
+
+   .StaticJsonDataDisplayer001TextContainer
+   {
+      color: var(--c5);
+   }
+
+   .StaticJsonDataDisplayer001TextContainerRemark
+   {
+      font-family: f1b;
+   }
+
+   .StaticJsonDataDisplayer001ButtonsContainer
+   {
+      height: auto;
+      width: 100%;
+   }
+   .StaticJsonDataDisplayer001ButtonsContainer>button
+   {
+      color: var(--c2);
+      background: var(--c1);
+      padding: 5px;
+      cursor: pointer;
+      font-size: 11px;
+   }
+}

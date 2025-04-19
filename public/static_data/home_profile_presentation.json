@@ -1,0 +1,89 @@
+{
+   "title": "About Me",
+   "ideas": [
+      {
+         "text": "Hi there! My name is Eduardo Osteicoechea.",
+         "key_words_and_phrases": []
+      },
+      {
+         "text": "I'm a Christian Thinker, BIM Architect, and Multiplatform BIM Software Developer committed to professional excellence and ethics.",
+         "key_words_and_phrases": []
+      },
+      {
+         "text": "I obtained a Bachelor's in Architecture from the Universidad De Los Andes in 2017.",
+         "key_words_and_phrases": ["Bachelor's in Architecture"]
+      },
+      {
+         "text": "This gift of God given through my parents, allowed me to practice extensively with AutoCAD drawings and 3D modeling using SketchUp. I also completed a BIM training at an Autodesk Authorized Training Center called Aitec at this epoch.",
+         "key_words_and_phrases": ["Bachelor's in Architecture", "AutoCAD", "SketchUp", "BIM training","Autodesk Authorized Training Center"]
+      },
+      {
+         "text": "Between 2017 and 2018, I worked as a project assistant, modeling buildings in SketchUp and AutoCAD. Notably, I generated the exterior image desing, lobby interior design, and pool area design, along with their rendering in 3ds Max, for the Lindo Sol Suites Hotel project. In this time I also generated the exterior image, floor plans, SketchUp 3D modeling, and rendering with V-Ray for the Lindo Bakery.",
+         "key_words_and_phrases": ["exterior image design", "interior design", "rendering in 3ds Max", "rendering with V-Ray"]
+      },
+      {
+         "text": "My involvement in the Lindo Sol Suites and Lindo Bakery projects allowed my employer (Galpon5) to fulfill the project requirements, without separate AutoCAD Drawer, SketchUp and AutoCAD Modeler, 3ds Max Renderer, and Interior Designer roles by leveraging my multitasking profile.",
+         "key_words_and_phrases": ["multitasking profile"]
+      },
+      {
+         "text": "After that, I served as a Venezuelan missionary for the Iglesia Palabra Viva and studied theology at the online Dominican Republic institute Integridad & Sabiduría until 2023. There, I engaged in leadership, teaching, public speaking, and counseling, and began my journey as an enthusiastic writer and song creator.",
+         "key_words_and_phrases": ["leadership", "teaching", "public speaking", "counseling", "writer"]
+      },
+      {
+         "text": "During the 2020 pandemic, I decided to learn Web Development, starting with an Udemy Web Fullstack Course covering HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL. I also consumed as much content as I could from YouTube channels like Web Dev Simplified, Kevin Powell, Bro Code, Programming with Mosh, and websites like w3schools.com and developer.mozilla.org.",
+         "key_words_and_phrases": ["Web Development","HTML","CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"]
+      },
+      {
+         "text": "In 2023, I re-entered the AEC industry as a Revit BIM Technician for VDC Works in Miami, where I discovered visual programming through Revit Dynamo and Python Scripts.",
+         "key_words_and_phrases": ["Revit BIM Technician","Revit Dynamo","Python Scripts"]
+      },
+      {
+         "text": "Nonetheless, after grappling with Dynamo's limitations for a few months, I discovered RevitAPI programming with .NET and C# and embarked on the journey of developing external commands and scripts for Revit and creating Revit Plugins with WPF.",
+         "key_words_and_phrases": ["RevitAPI programming",".NET","C#","external commands","scripts","Revit Plugins", "WPF"]
+      },
+      {
+         "text": "Later that year, my manager at VDC Works invited me to be the first employee of BIMIQs, a consulting startup for US AEC companies, to work as a BIM modeler, Revit parametric families designer and modeler, Revit API developer, and Web Fullstack developer. In this role, I coded tools like the Revit Modeler and programmed and hosted the design I received for bimiqs.com.",
+         "key_words_and_phrases": ["BIM modeler", "Revit parametric families designer", "Revit API developer","Web Fullstack developer","bimiqs.com"]
+      },
+      {
+         "text": "At BIMIQs, my employer obtained services for BIM modeling, BIM Research, RevitAPI development, and Fullstack Web Development by hiring my multitasking role.",
+         "key_words_and_phrases": ["multitasking"]
+      },
+      {
+         "text": "One interesting note is that this year I received three LinkedIn Badges on programming languages, getting ranked as part of the top 30% on C#, top 15% on PHP, and top 5% on CSS in this tests at the time.",
+         "key_words_and_phrases": ["top 30% on C#", "top 15% on PHP", "top 5% on CSS"]
+      },
+      {
+         "text": "From the last quarter of 2023 to the first of 2024, I worked as a Web Fullstack freelancer and UI & UX designer for scalaa.com, theinspiratagroup.com, hotelbelensate.com, eduardoos.com (my previous PHP-based site), crintt.com, and my signature landing page website thedalessiogroup.com, where I handled the full website hosting, branding, page design, and coding.",
+         "key_words_and_phrases": ["freelancer","UI & UX","website hosting", "branding"]
+      },
+      {
+         "text": "During this period, I provided freelancing services spanning Python scripting, website hosting setup, email migration, Fullstack development, UI & UX Design, image and video editing, and graphic design, all within a single multitasking role.",
+         "key_words_and_phrases": ["email migration", "multitasking", "graphic design","image and video editing"]
+      },
+      {
+         "text": "In March 2024, I started my journey as a professional BIM software developer with Avant Leap, an AI BIM Software development startup based in California. Here, I provided support and functionality extensions for Revit Add-ins such as Clash Detection, Object Visualizer, Object Quantifier, 4D Simulation, Avant Leap's Revit Dynamo Zero Touch Nodes, Mirar, Andiamo, and Itera, along with the full design and coding of the SincronizadorGPS50, a desktop Windows Forms and SQL Server application to connect Gestproject2024 and Sage50.",
+         "key_words_and_phrases": ["BIM software developer", "Revit Dynamo Zero Touch Nodes", "Windows Forms", "SQL Server"]
+      },
+      {
+         "text": "Remarkably, during this period, I was introduced to AI integrations for applications, intervening in Andiamo OpenAI Requests, Mirar queries to StabilityAI, and developing the WPF Itera Adding and collaborating on the setup of ReplicateAI-based actions.",
+         "key_words_and_phrases": ["AI integrations for applications","OpenAI","StabilityAI","ReplicateAI"]
+      },
+      {
+         "text": "Avant Leap received services in Windows Applications development, API development, RevitAPI External Command, Revit Add-in development, Revit Dynamo Zero Touch Nodes development, and AI integration through my multitasking role.",
+         "key_words_and_phrases": ["Windows Applications development"]
+      },
+      {
+         "text": "Currently, I'm developing Fullstack web applications with React and .NET minimal APIs, GitHub CI & CD workflows for AWS EC2 instances, leveraging the DeepSeek AI API, and using SQLite, with the aim of moving towards multiplatform integrations for AI-powered BIM applications for the AEC Industry.",
+         "key_words_and_phrases": ["React",".NET minimal APIs", "GitHub CI & CD workflows","AWS EC2", "DeepSeek AI API", "SQLite", "multiplatform integrations for AI-powered BIM applications"]
+      },
+      {
+         "text": "I'm eager to continue learning and refining my role to support AEC companies looking for multitasking professionals for AI-powered BIM Multiplatform solutions, seeking a sweet spot of results and cost-effectiveness in a single profile.",
+         "key_words_and_phrases": []
+      },
+      {
+         "text": "If you're interested in collaborating or hiring me, reach out through these mediums.",
+         "key_words_and_phrases": []
+      }
+   ]
+}

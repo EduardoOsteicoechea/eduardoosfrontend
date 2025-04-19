@@ -1,0 +1,43 @@
+.Header001{
+   display: flex;
+   align-items: center;
+   height: var(--headerHeight);
+   padding: 0 15px 0 15px;
+}
+
+.Header001LogoAnchor{
+   text-decoration: none;
+   height: 100%;
+   width: fit-content;
+   display: flex;
+   align-items: center;
+}
+
+.Header001LogoText{
+   font-size: 17px;
+   font-family: f1bl;
+}
+
+.Header001MenuButton{
+   width: 25px;
+   height: 25px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 3px;
+   padding: 0 7px;
+   background: var(--c2);
+   margin-left: auto;
+   cursor: pointer;
+}
+
+.Header001MenuButtonBar{
+   width: 100%;
+   height: 2px;
+   background: var(--c1);
+   border-radius: 5px;
+}
+
+.Header001MenuButtonBar1{
+
+}
