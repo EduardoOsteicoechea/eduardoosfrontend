@@ -64,21 +64,29 @@ function AHealthyLoneliness()
             <article>
                <h1>{jsonData.title}</h1>
                <ul>
-                  {ideas?.map((i,index) => <li key={index}><a href={"#"+i}>{i}</a></li>)}
+                  {ideas?.map((i,index) => <li key={index}><a href={"#"+i}>{index+1}. {i}</a></li>)}
                </ul>
                   {jsonData.ideas.map((i,index)=>
-                     <div key={index} className="ArticleIdea">
+                     <div
+                     key={index}
+                     className="ArticleIdea"
+                     >
                         <h2
                          key={index}
                          id={i.heading}
-                        >{i.heading}</h2>
+                        className="ArticleIdeaHeading"
+                        >{index+1}. {i.heading}</h2>
                         {i.subideas.map((si,index)=>{
-                           if(si.isBiblicalPassage) 
+                           const rbr = si.relatedBibleReferences && si.relatedBibleReferences.length > 0 ? si.relatedBibleReferences.reduce((acc,c)=>acc.concat(", " +c)) : "";
+                           if(si.isBiblicalPassage && si.isBiblicalPassage) 
                               return <p 
                               key={index} 
                               className="biblicalPassage"
                               >
-                                 {si.text}.
+                                 "{si.text}"". {rbr}
+                                 {
+                                    si.relatedBibleReferences.length > 0
+                                 }
                                  <span
                                  className="biblicalPassageReference"
                                  >
@@ -86,7 +94,10 @@ function AHealthyLoneliness()
                                  </span>
                               </p>
                            return <p key={index}>
-                                 {si.text}.
+                                 {si.text}. <span 
+                                 className="biblicalPassageReference">
+                                 {rbr}
+                                 </span>
                               </p>
                            }
                         )}

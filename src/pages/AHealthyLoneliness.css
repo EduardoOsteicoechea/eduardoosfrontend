@@ -26,14 +26,12 @@
    width: 100%;
 }
 
-.ArticleIdea{
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-   width: 100%;
+.ArticleIdeaHeading{
+   font-family: f1b;
 }
 .biblicalPassage{
    font-family: f1b;
+   padding: 0 0 0 20px;
 }
 .biblicalPassageReference{
    display: block;
