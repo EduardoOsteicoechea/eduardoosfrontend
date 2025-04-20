@@ -41,9 +41,9 @@ function AHealthyLoneliness()
 
             const data = await response.json();
             const formattedData: Article = data as Article;
-            setjsonData(formattedData)
+            setjsonData(formattedData);
             setideas(formattedData.ideas.map(idea => idea.heading));
-            setisDataLoaded(true)
+            setisDataLoaded(true);
          } catch (error: any)
          {
             console.error(error);
@@ -64,44 +64,45 @@ function AHealthyLoneliness()
             <article>
                <h1>{jsonData.title}</h1>
                <ul>
-                  {ideas?.map((i,index) => <li key={index}><a href={"#"+i}>{index+1}. {i}</a></li>)}
+                  {ideas?.map((i, index) => <li key={index}><a href={"#" + i}>{index + 1}. {i}</a></li>)}
                </ul>
-                  {jsonData.ideas.map((i,index)=>
-                     <div
+               {jsonData.ideas.map((i, index) =>
+                  <div
                      key={index}
                      className="ArticleIdea"
-                     >
-                        <h2
-                         key={index}
-                         id={i.heading}
+                  >
+                     <h2
+                        key={index}
+                        id={i.heading}
                         className="ArticleIdeaHeading"
-                        >{index+1}. {i.heading}</h2>
-                        {i.subideas.map((si,index)=>{
-                           const rbr = si.relatedBibleReferences && si.relatedBibleReferences.length > 0 ? si.relatedBibleReferences.reduce((acc,c)=>acc.concat(", " +c)) : "";
-                           if(si.isBiblicalPassage && si.isBiblicalPassage) 
-                              return <p 
-                              key={index} 
+                     >{index + 1}. {i.heading}</h2>
+                     {i.subideas.map((si, index) => {
+
+                        const rbr = si.relatedBibleReferences && si.relatedBibleReferences.length > 0 ? si.relatedBibleReferences.reduce((acc, c) => acc.concat(", " + c)) : "";
+
+                        if (si.isBiblicalPassage && si.isBiblicalPassage)
+                        {
+                           return <p
+                              key={index}
                               className="biblicalPassage"
-                              >
-                                 "{si.text}"". {rbr}
-                                 {
-                                    si.relatedBibleReferences.length > 0
-                                 }
-                                 <span
+                           >
+                              "{si.text}"". {rbr}
+                              <span
                                  className="biblicalPassageReference"
-                                 >
-                                    {si.biblicalReference}.
-                                 </span>
-                              </p>
-                           return <p key={index}>
-                                 {si.text}. <span 
-                                 className="biblicalPassageReference">
-                                 {rbr}
-                                 </span>
-                              </p>
-                           }
-                        )}
-                     </div>)}
+                              >
+                                 {si.biblicalReference}.
+                              </span>
+                           </p>;
+                        }
+                        return <p key={index}>
+                           {si.text}. <span
+                              className="biblicalPassageReference">
+                              {rbr}
+                           </span>
+                        </p>;
+                     }
+                     )}
+                  </div>)}
             </article>
          )}
       </div>
