@@ -5,6 +5,7 @@ import LogIn from './pages/LogIn';
 import SignIn from './pages/SingIn';
 import LogOut from './pages/LogOut';
 import Header001 from './components/Header/Header001';
+import AHealthyLoneliness from './pages/AHealthyLoneliness';
 
 function App()
 {
@@ -17,6 +18,7 @@ function App()
             <Route path="/login" element={<LogIn />} />
             <Route path="/singin" element={<SignIn />} />
             <Route path="/logout" element={<LogOut />} />
+            <Route path="/a_healthy_lonelyness" element={<AHealthyLoneliness />} />
          </Routes>
       </BrowserRouter>
    );

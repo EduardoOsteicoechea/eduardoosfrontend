@@ -1,0 +1,43 @@
+.ArticlePage001{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding: 20px;
+   width: 100dvw;
+}
+.ArticlePage001 > article{
+   margin: auto;
+   max-width: 600px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.ArticlePage001 > article > ul{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+}
+.ArticleIdea{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+}
+
+.ArticleIdea{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+}
+.biblicalPassage{
+   font-family: f1b;
+}
+.biblicalPassageReference{
+   display: block;
+   font-family: f1l;
+   color: var(--c5);
+
+}
