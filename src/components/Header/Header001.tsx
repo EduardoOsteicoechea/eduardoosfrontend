@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Navigation001 from "../Navigation/Navigation001";
 import React from "react";
-import "./Header001.css"
+import "./Header001.css";
+import "./Navigation001.css";
 
 function Header001() {
    const [menuIsExpanded, setmenuIsExpanded] = React.useState(false)
@@ -45,13 +45,37 @@ function Header001() {
 
 
 
+      const [navigationClasses, setnavigationClasses] = React.useState("Navigation001");
+   
+      React.useEffect(() =>
+      {
+         setnavigationClasses((prev) =>
+         {
+            if (prev === "Navigation001 Navigation001Visible")
+            {
+               return "Navigation001 Navigation001Hidden";
+            }
+            else if (prev === "Navigation001")
+            {
+               return "Navigation001 Navigation001Hidden";
+            }
+            else
+            {
+               return "Navigation001 Navigation001Visible";
+            }
+         });
+      }, [menuIsExpanded]);
+
    return (
       <>
          <div
             className="Header001"
          >
-            <Link to="/"
-               className="Header001LogoAnchor">
+            <Link 
+            to="/"
+            className="Header001LogoAnchor"
+            onClick={handleHeader001MenuButtonClick}
+            >
                <p
                   className="Header001LogoText"
                >eduardoos.com</p>
@@ -81,9 +105,24 @@ function Header001() {
                 <img src="brand/icon_menu.svg" height="100%"/>
             </button>
          </div>
-         <Navigation001 isExpanded={menuIsExpanded} />
+         
+         <nav className={navigationClasses}>
+            <ul className="Navigation001Ul">
+               <li>
+                  <Link to="/"
+            onClick={handleHeader001MenuButtonClick}
+            >Home</Link>
+               </li>
+               <li>
+                  <Link to="/a_healthy_lonelyness"
+            onClick={handleHeader001MenuButtonClick}
+            >A Healthy Loneliness</Link>
+               </li>
+            </ul>
+         </nav>
       </>
    )
 }
+
 
 export default Header001
