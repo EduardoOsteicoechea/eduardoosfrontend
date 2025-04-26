@@ -1,0 +1,19 @@
+:root
+{
+   --c1: #fff;
+   --c2: #fafafa;
+   --c3: #f0f0f0;
+   --c4: #eee;
+   --c5: #ccc;
+   --c6: #bbb;
+   --c7: #aaa;
+   --c7: #777;
+   --c7: #444;
+   --c10: #000;
+}
+
+.light_background_strong_foreground
+{
+   background: var(--c3);
+   color: var(--c10);   
+}

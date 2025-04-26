@@ -1,0 +1,18 @@
+:root
+{
+   --c1: #000;
+   --c2: #444;
+   --c3: #777;
+   --c4: #aaa;
+   --c5: #bbb;
+   --c6: #ccc;
+   --c7: #eee;
+   --c8: #f0f0ff;
+   --c9: #fafafa;
+   --c10: #fff;
+}
+
+.light_background_strong_foreground
+{
+   filter: invert(100);   
+}

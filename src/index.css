@@ -108,7 +108,8 @@
 
 :root
 {
-   font-size: 15px;
+   /* font-size: 15px; */
+
    font-synthesis: none;
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
@@ -122,15 +123,10 @@
    --tr2: all ease 200ms;
 
    --itemHeight: 30px;
+   --margin_global1: 10px;
+   --margin_global2: 10px;
+   --border-radius1: 4px;
 
-   --c1: #fff;
-   --c2: #000;
-   --c3: #f0f0f0;
-   --c4: #fafafa;
-   --c5: #777;
-   --c6: #aaa;
-   --c7: #ccc;
-   --c8: #444;
 
    --navigation_menu_width: 300px;
    --headerHeight: 50px;
@@ -146,10 +142,9 @@
    box-sizing: border-box;
    border: none;
    position: relative;
-   transition: var(--tr1);
-   color: var(--c2);
+   /* transition: var(--tr1); */
+   color:var(--c10) !important;
    font-family: var(--f1l);
-   border-radius: 4px;
 }
 
 body

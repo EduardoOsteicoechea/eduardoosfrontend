@@ -1,0 +1,6 @@
+:root
+{
+   --global_font_size:12px;
+   font-size: calc(1 * var(--global_font_size));
+   line-height: calc(1.5 * var(--global_font_size));
+}
