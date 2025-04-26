@@ -20,5 +20,6 @@ body
 
 .light_background_strong_foreground
 {
-   filter: invert(100);   
+   background: var(--c10);
+   filter:invert(100)
 }
