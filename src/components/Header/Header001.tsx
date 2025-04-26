@@ -54,7 +54,7 @@ function Header001() {
                className="Header001LogoAnchor">
                <p
                   className="Header001LogoText"
-               >Eduardo Osteicoechea</p>
+               >eduardoos.com</p>
             </Link>
             <button
                className="light_background_strong_foreground"
