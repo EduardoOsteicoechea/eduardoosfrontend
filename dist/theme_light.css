@@ -12,6 +12,11 @@
    --c10: #000;
 }
 
+body
+{
+   background: var(--c2);
+}
+
 .light_background_strong_foreground
 {
    background: var(--c3);
