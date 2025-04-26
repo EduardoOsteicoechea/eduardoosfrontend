@@ -157,6 +157,7 @@ body
    overflow-y: auto !important;
    margin: auto;
    /* border: var(--b1); */
+   background: var(--c3);
 }
 
 ul
