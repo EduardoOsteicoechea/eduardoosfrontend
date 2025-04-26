@@ -1,17 +1,15 @@
 .HomeHero{
    height: calc(100dvh - var(--headerHeight));
    min-height: calc(100dvh - var(--headerHeight));
-   background: var(--c3);
    display: flex;
    align-items: center;
    justify-content: center;
    gap: 20px;
-   padding: 20px 40px 20px 80px;
+   padding: 0px 40px 0px 80px;
    border-radius: 0;
 }
 .HomeHeroImageContainer{
    display: flex;
-   align-items: center;
    justify-content: center;
    height: var(--homeChatHeight);
    width: var(--homeChatHeight);
@@ -19,12 +17,6 @@
    border-radius: var(--br1);
    overflow: hidden;
    background: var(--c1);
-   padding: 10px 30px;
-}
-.HomeHeroImageImage{
-   top: 145px;
-   border-radius: 1000px;
-   height: 180%;
 }
 
 
@@ -50,11 +42,7 @@
       border-radius: var(--br1);
       overflow: hidden;
       background: var(--c1);
-      padding: 10px 30px;
    }
    .HomeHeroImageImage{
-      top:80px;
-      border-radius: 1000px;
-      height: 150%;
    }
 }

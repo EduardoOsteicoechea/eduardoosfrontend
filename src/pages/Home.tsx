@@ -11,8 +11,7 @@ function Home() {
          className="HomeHeroImageContainer"
          >
             <img
-            className="HomeHeroImageImage"
-            src="1920x1920.jpg"
+            src="personal_photo_white_1920x1920.jpg"
             height="100%"
             />
          </div>
