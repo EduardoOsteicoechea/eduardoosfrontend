@@ -4,7 +4,7 @@
    flex-direction: column;
    gap: 10px;
    top:var(--headerHeight);
-   min-height: calc(100dvh - (var(--headerHeight) + var(--footerMinHeight)));
+   min-height: calc(100dvh - (var(--headerHeight)));
    width: 0;
    background: var(--c3);
    z-index: 10000;
