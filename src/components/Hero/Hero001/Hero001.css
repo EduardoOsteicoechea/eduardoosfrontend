@@ -1,63 +1,80 @@
-/* .Hero001 {
-  display: grid;
-  grid-template-columns: 20px var(--item_height_10) 20px auto 20px var(--item_height_10) 20px;
-  grid-template-rows: 20px var(--item_height_10) 20px;
-} */
 .Hero001 {
   display: grid;
-  grid-template-columns: 2dvw 35dvw 2dvw auto 2dvw 35dvw 2dvw;
-  grid-template-rows: 2dvw 35dvw 2dvw;
+  grid-template-columns: 2dvw 25dvw 2dvw auto 2dvw 25dvw 2dvw;
+  grid-template-rows: 2dvw 5dvw 2dvw 15dvw 2dvw 3dvw 2dvw;
 }
-
 .Hero001>* {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-radius: var(--border_radius_2);
-  padding: 0px;
 }
 
 .ImageContainer {
   background: white;
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 2 / span 5;
   width: 100%;
 }
 .ImageContainer>img {
-  top: 20px;
   height: 100%;
 }
 
 .CurrentViewerPanel {
   grid-column: 4;
-  grid-row: 2;
+  grid-row: 2 / span 5;
   width: 100%;
   border: solid 2px var(--c10);
+  font-size: 2dvw;
+}
+.CurrentViewerPanel > * {
+  font-size: 4dvw;
 }
 
-.OptionsDashboardBorder {
+.OptionsDashboardContainerPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   grid-column: 6;
   grid-row: 2;
-  width: 100%;
-  padding: var(--margin_global1);
-  border: solid 2px var(--c10);
 }
-
+.OptionsDashboardContainerPanel>h1 {
+  font-size: 1.75dvw;
+  font-family: f1bl;
+}
 .OptionsDashboardContainer {
-  height: 100%;
+  grid-column: 6;
+  grid-row: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6%;
   width: 100%;
+  /* border: solid 2px var(--c10); */
 }
-
 .OptionsDashboard-FacetButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: var(--item_Height_1);
-  width: var(--item_Height_1);
+  height: 30%;
+  width: 20%;
   overflow: hidden;
   border-radius: var(--border_radius1);
   cursor: pointer;
+  background: var(--c1);
+}
+.OptionsDashboardActionButton {
+  display: flex;
+  align-items: center;
+  grid-column: 6;
+  grid-row: 6;
+  background: var(--c10);
+  border-radius: .2dvw;
+  color: var(--c1) !important;
+  font-family: f1b;
+  margin-right: 50%; 
 }
 
 
@@ -65,31 +82,69 @@
 
 @media only screen and (max-width: 620px) {
   .Hero001 {
-    grid-template-columns: 3.3dvw 45dvw auto 45dvw 3.3dvw;
-    grid-template-rows: 3vw 45dvw 15px auto 15px;
+    grid-template-columns: 5dvw 42.5dvw 5dvw 42.5dvw 5dvw;
+    grid-template-rows: 5dvw 5dvw 3dvw 30dvw 3dvw 8dvw 5dvw auto 5dvw;
     height: fit-content;
     width: 100%;
     /* border: solid 1px red; */
   }
-  .ImageContainer{
+
+  .ImageContainer {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 2 / span 5;
     width: 100%;
   }
-  .OptionsDashboardBorder{
-    grid-column: 4;
-    grid-row: 2;
-    width: 100%;
+
+  .ImageContainer>img {
+    top: 0px;
+    left: 2dvw;
+    height: 100%;
   }
-  .CurrentViewerPanel{
+
+  .CurrentViewerPanel {
     grid-column: 2;
     column-span: 2;
-    grid-row: 4;
+    grid-row: 8;
     width: 93.0dvw;
-    background: green;
-
   }
 
+  .OptionsDashboardContainerPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .OptionsDashboardContainerPanel>h1 {
+    font-size: 4.75dvw;
+    font-family: f1bl;
+  }
+  .OptionsDashboardContainer {
+    gap: 6%;
+    grid-column: 4;
+    grid-row: 4;
+    padding: 0;
+    /* border: solid 0.85dvw var(--c10); */
+  }
+  .OptionsDashboard-FacetButton {
+    display: flex;
+    height: 26%;
+    width: 20%;
+    /* border: solid 0.1dvw var(--c5); */
+  }
+  .OptionsDashboard-FacetButton > img {
+    border: none;
+  }
+  .OptionsDashboardActionButton {
+    display: flex;
+    align-items: center;
+    grid-column: 4;
+    grid-row: 6;
+    background: var(--c10);
+    border-radius: .8dvw;
+    color: var(--c1) !important;
+    font-family: f1b; 
+  }
 }
 
 @media only screen and (max-width: 350px) {}

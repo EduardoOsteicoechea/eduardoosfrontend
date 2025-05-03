@@ -53,8 +53,8 @@
    }
    .Header001LogoText
    {
-      top: .5dvw;
-      font-size: 6.0dvw;
+      top: -.05dvw;
+      font-size: 5.20dvw;
       font-family: f1bl;
    }
    .Header001 > button
