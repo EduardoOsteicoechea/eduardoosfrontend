@@ -56,7 +56,7 @@ function AHealthyLoneliness()
 
    return (
       <div
-         className="ArticlePage001"
+         className="Page ArticlePage001"
       >
          {errorMessage && <p>Error: {errorMessage}</p>}
          {!isDataLoaded && !errorMessage && <p>Loading data...</p>}

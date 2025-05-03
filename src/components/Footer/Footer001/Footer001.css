@@ -1,0 +1,17 @@
+.Footer
+{
+  background: var(--c10);
+  color: var(--c1);
+  height: var(--footerMinHeight);
+}
+
+@media only screen and (max-width: 950px) and (min-width: 621px)
+{}
+
+@media only screen and (max-width: 620px)
+{}
+
+@media only screen and (max-width: 350px)
+{
+  
+}

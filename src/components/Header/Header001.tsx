@@ -74,7 +74,6 @@ function Header001() {
             <Link 
             to="/"
             className="Header001LogoAnchor"
-            onClick={handleHeader001MenuButtonClick}
             >
                <p
                   className="Header001LogoText"
@@ -84,25 +83,25 @@ function Header001() {
                className="light_background_strong_foreground"
                onClick={handleHeader001ThemeButtonClick}
             >
-                <img src="brand/icon_theme_toggle.svg" height="100%"/>
+                <img src="/brand/icon_theme_toggle.svg" height="100%"/>
             </button>
             <button
                className="light_background_strong_foreground"
                onClick={handleHeader001BiggerButtonClick}
             >
-                <img src="brand/icon_font_size_increment.svg" height="100%"/>
+                <img src="/brand/icon_font_size_increment.svg" height="100%"/>
             </button>
             <button
                className="light_background_strong_foreground"
                onClick={handleHeader001SmallerButtonClick}
             >
-                <img src="brand/icon_font_size_decrement.svg" height="100%"/>
+                <img src="/brand/icon_font_size_decrement.svg" height="100%"/>
             </button>
             <button
                className="light_background_strong_foreground"
                onClick={handleHeader001MenuButtonClick}
             >
-                <img src="brand/icon_menu.svg" height="100%"/>
+                <img src="/brand/icon_menu.svg" height="100%"/>
             </button>
          </div>
          

@@ -1,0 +1,17 @@
+.Page
+{
+   /* border: solid 1px red; */
+   width: 100%;
+   min-height: calc(100dvh - (var(--headerHeight) + var(--footerMinHeight)));
+}
+
+@media only screen and (max-width: 950px) and (min-width: 621px)
+{}
+
+@media only screen and (max-width: 620px)
+{}
+
+@media only screen and (max-width: 350px)
+{
+
+}

@@ -3,7 +3,7 @@
    flex-direction: column;
    gap: 20px;
    padding: 20px;
-   width: 100dvw;
+   width: 100%;
 }
 .ArticlePage001 > article{
    margin: auto;

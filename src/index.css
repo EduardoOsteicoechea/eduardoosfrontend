@@ -114,24 +114,23 @@
    text-rendering: optimizeLegibility;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-
    font-family: f1r, system-ui;
    scroll-behavior: smooth;
    --b1: solid .1rem red;
    --b2: solid .1rem rgb(0, 0, 0);
    --tr1: all ease 1000ms;
    --tr2: all ease 200ms;
-
+}
+:root
+{
    --itemHeight: 30px;
    --margin_global1: 10px;
    --margin_global2: 10px;
    --border-radius1: 4px;
-
-
    --navigation_menu_width: 300px;
    --headerHeight: 60px;
+   --footerMinHeight: 60px;
    --homeChatHeight: 400px;
-
    --br1: 9px;
 }
 
@@ -175,7 +174,18 @@ ul
 
    body
    {
-      display: block;
       width: 350px;
+      height: 100dvw;
    }
+   /* :root
+   {
+      --itemHeight: 30px;
+      --margin_global1: 15px;
+      --margin_global2: 10px;
+      --border-radius1: 4px;
+      --navigation_menu_width: 300px;
+      --headerHeight: 60px;
+      --homeChatHeight: 400px;
+      --br1: 9px;
+   } */
 }
