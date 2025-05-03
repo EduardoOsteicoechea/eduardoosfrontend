@@ -2,9 +2,10 @@
 {
    display: flex;
    align-items: center;
-   height: var(--headerHeight);
-   padding: 15px 15px;
+   height: 3.5dvw;
+   padding: .85dvw 1.75dvw .85dvw .85dvw;
    background:var(--c1);
+   width: 100dvw;
 }
 .Header001LogoAnchor
 {
@@ -17,15 +18,18 @@
 }
 .Header001LogoText
 {
-   font-size: calc(var(--headerHeight)/3.2);
+   font-size: 1.1dvw;
    font-family: f1bl;
 }
 .Header001 > button
 {
-   font-size: var(--global_font_size);
-   height: 100%;
-   border-radius: var(--border-radius1);
-   margin-left: var(--margin_global1);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 1.8dvw;
+   height: 1.8dvw;
+   border-radius: .2dvw;
+   margin-left: .5dvw;
 }
 
 @media only screen and (max-width: 620px)
@@ -33,10 +37,11 @@
    .Header001
    {
       display: flex;
-      align-items: center;
-      height: var(--headerHeight);
-      padding: 15px;
+      align-items: end;
+      height: 16dvw;
+      padding: 4dvw 4dvw;
       background:var(--c1);
+      width: 100dvw;
    }
    .Header001LogoAnchor
    {
@@ -44,19 +49,19 @@
       height: 100%;
       width: fit-content;
       display: flex;
-      align-items: flex-end;
       margin-right: auto;
    }
    .Header001LogoText
    {
-      font-size: 17px;
+      top: .5dvw;
+      font-size: 6.0dvw;
       font-family: f1bl;
    }
    .Header001 > button
    {
-      font-size: var(--global_font_size);
-      height: 100%;
-      border-radius: var(--border-radius1);
-      margin-left: var(--margin_global1);
+      width: 8dvw;
+      height: 8dvw;
+      border-radius: .8dvw;
+      margin-left: 2dvw;
    }
 }

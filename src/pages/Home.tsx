@@ -1,3 +1,4 @@
+import Hero001 from "../components/Hero/Hero001/Hero001";
 
 
 function Home() {
@@ -6,7 +7,7 @@ function Home() {
       <div
       className="Page"
       >
-         
+         <Hero001></Hero001>
       </div>
    );
  }
