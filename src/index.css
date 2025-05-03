@@ -168,6 +168,10 @@ body
    margin: auto;
 }
 
+button
+{
+   cursor: pointer;
+}
 ul
 {
    list-style: none;

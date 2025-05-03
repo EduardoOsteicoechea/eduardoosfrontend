@@ -1,17 +1,62 @@
-.Footer
-{
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--c10);
-  color: var(--c1);
-  height: var(--footerMinHeight);
+  max-height: 25dvw;
+  height: 7dvw;
+  padding: 1dvw 0;
+  gap: 1dvw;
 }
 
-@media only screen and (max-width: 950px) and (min-width: 621px)
-{}
-
-@media only screen and (max-width: 620px)
-{}
-
-@media only screen and (max-width: 350px)
-{
-  
+.Footer>a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c1) !important;
+  font-size: 1.5dvw;
 }
+
+.Footer>span {
+  display: block;
+  height: 1dvw;
+  width: .1dvw;
+  background: var(--c1) !important;
+}
+
+@media only screen and (max-width: 950px) and (min-width: 621px) {}
+
+@media only screen and (max-width: 620px) {
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--c10);
+    max-height: 225dvw;
+    height: 300px !important;
+    padding: 25dvw 0;
+    width: 100dvw;
+    gap: 3dvw;
+  }
+
+  .Footer>a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c1) !important;
+    font-size: 3.5dvw;
+    font-family: f1b;
+  }
+
+  .Footer>span {
+    display: block;
+    height: 1px;
+    width: 2dvw;
+    background: var(--c1) !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {}

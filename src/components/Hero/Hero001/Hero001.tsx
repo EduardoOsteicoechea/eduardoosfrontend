@@ -7,17 +7,21 @@ function Hero001() {
       <div className="ImageContainer">
         <img src="/personal_photo_no_background_1920x1920.png" alt="Profile Photo" height="100%" />
       </div>
+
       <div className="CurrentViewerPanel">
         Current Viewer
       </div>
+
       <div className="OptionsDashboardContainerPanel">
         <h1>
-          Multitasking Role
+          Multitask Role
         </h1>
       </div>
+
       <button className="OptionsDashboardActionButton" type="button">
         Let's Talk
       </button>
+
       <div className="OptionsDashboardContainer">
         <button className="OptionsDashboard-FacetButton">
           <img src="/brand/icon_ai.svg" alt="ai icon" height="100%" />

@@ -4,7 +4,13 @@ function Footer001(){
 
   return(
     <footer className="Footer">
-      this is the footer
+      <a href="https://www.linkedin.com/in/eduardoosteicoechea/" target="_blank">LinkedIn</a>
+      <span></span>      
+      <a href="https://github.com/EduardoOsteicoechea" target="_blank">Github</a>
+      <span></span>      
+      <a href="https://wa.me/584147281033" target="_blank">WhatsApp</a>
+      <span></span>
+      <a href="mailto:eduardooost@gmail.com" target="_blank">Email</a>
     </footer>
   )
 }

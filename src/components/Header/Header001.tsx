@@ -80,6 +80,11 @@ function Header001() {
                >eduardoos.com</p>
             </Link>
             <button
+               className="light_background_strong_foreground lets_talk_button"
+            >
+               Let's Talk
+            </button>
+            <button
                className="light_background_strong_foreground"
                onClick={handleHeader001ThemeButtonClick}
             >

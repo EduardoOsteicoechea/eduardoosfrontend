@@ -3,7 +3,7 @@
    display: flex;
    align-items: center;
    height: 3.5dvw;
-   padding: .85dvw 1.75dvw .85dvw .85dvw;
+   padding: .85dvw 1.75dvw .85dvw 1.2dvw;
    background:var(--c1);
    width: 100dvw;
 }
@@ -18,7 +18,7 @@
 }
 .Header001LogoText
 {
-   font-size: 1.1dvw;
+   font-size: 1.4dvw;
    font-family: f1bl;
 }
 .Header001 > button
@@ -30,6 +30,15 @@
    height: 1.8dvw;
    border-radius: .2dvw;
    margin-left: .5dvw;
+}
+.lets_talk_button
+{
+   width: fit-content !important;
+   font-size: .9dvw;
+   padding: 0 .8dvw;
+   background: var(--c10) !important;
+   color: var(--c1) !important;
+   font-family: f1bl;
 }
 
 @media only screen and (max-width: 620px)
@@ -63,5 +72,9 @@
       height: 8dvw;
       border-radius: .8dvw;
       margin-left: 2dvw;
+   }
+   .lets_talk_button
+   {
+      display: none !important;
    }
 }
