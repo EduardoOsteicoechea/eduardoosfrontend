@@ -53,8 +53,8 @@
 
   .Footer>span {
     display: block;
-    height: 2px;
-    width: 2dvw;
+    height: 1px;
+    width: 3dvw;
     background: var(--c1) !important;
   }
 }
