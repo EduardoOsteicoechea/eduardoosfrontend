@@ -112,11 +112,11 @@ function Header001() {
             onClick={handleHeader001MenuButtonClick}
             >Home</Link>
                </li>
-               <li>
+               {/* <li>
                   <Link to="/a_healthy_lonelyness"
             onClick={handleHeader001MenuButtonClick}
             >A Healthy Loneliness</Link>
-               </li>
+               </li> */}
             </ul>
          </nav>
       </>

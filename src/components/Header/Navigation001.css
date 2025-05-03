@@ -4,12 +4,13 @@
    flex-direction: column;
    gap: 10px;
    top:var(--headerHeight);
-   min-height: calc(100dvh - var(--headerHeight));
+   min-height: calc(100dvh - (var(--headerHeight) + var(--footerMinHeight)));
    width: 0;
    background: var(--c3);
    z-index: 10000;
    border-radius: 0;
    overflow: hidden;
+   transition: width 1000ms ease;
 }
 .Navigation001Visible{
    width: 100%;

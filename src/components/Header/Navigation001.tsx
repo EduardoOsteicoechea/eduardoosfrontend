@@ -36,9 +36,9 @@ function Navigation001({ isExpanded }: Navigation001Props)
             <li>
                <Link to="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
                <Link to="/a_healthy_lonelyness">A Healthy Loneliness</Link>
-            </li>
+            </li> */}
          </ul>
       </nav>
    );

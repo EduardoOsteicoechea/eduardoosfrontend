@@ -19,7 +19,7 @@ function App()
             <Route path="/login" element={<LogIn />} />
             <Route path="/singin" element={<SignIn />} />
             <Route path="/logout" element={<LogOut />} />
-            <Route path="/a_healthy_lonelyness" element={<AHealthyLoneliness />} />
+            {/* <Route path="/a_healthy_lonelyness" element={<AHealthyLoneliness />} /> */}
          </Routes>
          <Footer001 />
       </BrowserRouter>

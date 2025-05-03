@@ -44,7 +44,7 @@
       height: 100%;
       width: fit-content;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       margin-right: auto;
    }
    .Header001LogoText
