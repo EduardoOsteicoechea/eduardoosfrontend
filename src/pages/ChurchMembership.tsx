@@ -62,7 +62,7 @@ function ChurchMembership() {
             <article>
                <h1 className="article_heading">{jsonData.title}</h1>
                <ul>
-                  {ideas?.map((i, index) => <li key={index}><a className="reference_to_article_heading" href={"#" + i}>{i}</a></li>)}
+                  {ideas?.map((i, index) => <li key={index}><span>{index+1}. </span><a className="reference_to_article_heading" href={"#" + i}>{i}</a></li>)}
                </ul>
                {jsonData.ideas.map((i, index) =>
                   <div
@@ -96,7 +96,7 @@ function ChurchMembership() {
                            const ideas: BiblicallyJustifiedIdeaList[] = si.biblicallyJustifiedIdeaList
                            return <div
                               key={index}
-                              className=""
+                              className="biblicalPassage"
                            >
                               <ul className="biblically_justified_idea_list" >
                                  {ideas.map((element, i) => (
