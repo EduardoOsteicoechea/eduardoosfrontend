@@ -61,7 +61,7 @@ function ChurchMembership() {
          {isDataLoaded && jsonData && (
             <article>
                <h1 className="article_heading">{jsonData.title}</h1>
-               <ul>
+               <ul className="reference_to_article_heading_list">
                   {ideas?.map((i, index) => <li key={index}><span>{index+1}. </span><a className="reference_to_article_heading" href={"#" + i}>{i}</a></li>)}
                </ul>
                {jsonData.ideas.map((i, index) =>

@@ -13,12 +13,7 @@
    flex-direction: column;
    gap: 20px;
 }
-.ArticlePage001 > article > ul{
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-   width: 100%;
-}
+
 .ArticleIdea{
    display: flex;
    flex-direction: column;

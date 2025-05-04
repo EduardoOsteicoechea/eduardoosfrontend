@@ -6,7 +6,7 @@
    width: 100%;
 }
 
-.ArticlePage001>article {
+.ArticlePage001 > article {
    margin: auto;
    max-width: 600px;
    width: 100%;
@@ -20,19 +20,20 @@
    font-size: 2rem;
 }
 
-.ArticlePage001>article>ul {
-   width: 100%;
+.reference_to_article_heading_list{
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
 }
-.ArticlePage001>article>ul>li {
+.reference_to_article_heading_list>li {
    display: flex;
    gap: .5rem;
    margin: 0;
 }
-
 .reference_to_article_heading {
    font-family: f1b;
    text-decoration: none;
-   padding: .5dvw 1dvw;
+   padding: .5dvw .5dvw;
    background: var(--c1);
    color: var(--c10);
    border-radius: .25dvw;
