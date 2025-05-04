@@ -41,6 +41,34 @@
    font-family: f1bl;
 }
 
+
+.Navigation001{
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   top:var(--headerHeight);
+   min-height: calc(100dvh - (var(--headerHeight)));
+   width: 0;
+   background: var(--c3);
+   z-index: 10000;
+   border-radius: 0;
+   overflow: hidden;
+   transition: width 1000ms ease;
+}
+.Navigation001Visible{
+   width: 100%;
+}
+.Navigation001Hidden{
+   width: 0;
+}
+.Navigation001Ul{
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
 @media only screen and (max-width: 620px)
 {
    .Header001

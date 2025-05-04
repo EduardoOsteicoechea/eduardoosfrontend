@@ -6,23 +6,28 @@
   max-height: 25dvw;
   height: 7dvw;
   padding: 1dvw 0;
-  gap: 1dvw;
+  gap: .75dvw;
 }
 
 .Footer>a {
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--c1) !important;
-  font-size: 1.5dvw;
+  text-decoration: none;
+  background: var(--c1) !important;
+  color: var(--c10) !important;
+  font-size: .85dvw;
+  padding: 0 .9dvw;
+  border-radius: .2dvw;
+  font-family: f1b;
+  width: 6dvw;
+  height: 1.85dvw;
 }
 
-.Footer>span {
-  display: block;
-  height: 1dvw;
-  width: .1dvw;
-  background: var(--c1) !important;
+.footer_links_heading {
+  color: var(--c1) !important;
+  font-family: f1b;
+  font-size: .85dvw;
 }
 
 @media only screen and (max-width: 950px) and (min-width: 621px) {}
@@ -31,31 +36,39 @@
   .Footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     background: var(--c10);
     max-height: 225dvw;
     height: 450px !important;
-    padding: 25dvw 0;
+    padding: 5dvw;
     width: 100dvw;
     gap: 3dvw;
   }
 
   .Footer>a {
-    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--c1) !important;
-    font-size: 3.5dvw;
-    font-family: f1b;
+    text-decoration: none;
+    background: var(--c1) !important;
+    color: var(--c10) !important;
+    font-size: 3.15dvw;
+    padding: 0 .9dvw;
+    border-radius: .75dvw;
+    font-family: f1bl;
+    width: 22dvw;
+    height: 7dvw;
   }
 
-  .Footer>span {
-    display: block;
-    height: 1px;
-    width: 3dvw;
-    background: var(--c1) !important;
+  .footer_links_heading {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--c1) !important;
+    font-family: f1b;
+    font-size: 4.5dvw;
+    width: 22dvw;
+    line-height: 5dvw;
   }
 }
 

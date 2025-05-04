@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import "./Header001.css";
-import "./Navigation001.css";
 
 function Header001() {
    const [menuIsExpanded, setmenuIsExpanded] = React.useState(false)
@@ -42,8 +41,11 @@ function Header001() {
    React.useEffect(() => {
       replaceStylesheet("fontSize_stylesheet", "font_size_", fontSize)
    }, [fontSize]);
-
-
+   
+   
+   const handleLetsTalkButtonClick = () => {
+      window.open('https://wa.me/584147281033', '_blank');
+   }
 
       const [navigationClasses, setnavigationClasses] = React.useState("Navigation001");
    
@@ -81,6 +83,7 @@ function Header001() {
             </Link>
             <button
                className="light_background_strong_foreground lets_talk_button"
+               onClick={handleLetsTalkButtonClick}
             >
                Let's Talk
             </button>
@@ -121,6 +124,11 @@ function Header001() {
                   <Link to="/a_healthy_lonelyness"
             onClick={handleHeader001MenuButtonClick}
             >A Healthy Loneliness</Link>
+               </li>
+               <li>
+                  <Link to="/church_membership"
+            onClick={handleHeader001MenuButtonClick}
+            >Church Membership</Link>
                </li>
             </ul>
          </nav>

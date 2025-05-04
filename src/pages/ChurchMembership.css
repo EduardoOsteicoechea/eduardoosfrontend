@@ -1,0 +1,77 @@
+.ArticlePage001{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding: 2dvw 5dvw;
+   width: 100%;
+}
+.ArticlePage001 > article{
+   margin: auto;
+   max-width: 600px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.article_heading{
+   font-family: f1b;
+   font-size: 2rem;
+}
+.ArticlePage001 > article > ul{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+}
+.ArticleIdea{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+}
+.ArticleIdea > p{
+   line-height: 1.6rem;
+   letter-spacing: .04rem;
+   word-spacing: .2rem;
+}
+
+.ArticleIdeaHeading{
+   font-family: f1b;
+}
+.biblicalPassage{
+   font-family: f1b;
+   padding: 0 0 0 20px;
+}
+.biblicalPassageReference{
+   display: block;
+   font-family: f1l;
+   color: var(--c5);
+
+}
+.reference_to_article_heading{
+   display: flex;
+   flex-wrap: wrap;
+   font-family: f1b;
+   width: 100%;
+   text-decoration: none;
+   padding: .5dvw 1dvw;
+   background: var(--c1);
+   color: var(--c10);
+   border-radius: .25dvw;
+}
+
+
+@media only screen and (max-width: 620px)
+{
+   .reference_to_article_heading{
+      display: flex;
+      flex-wrap: wrap;
+      font-family: f1b;
+      width: 100%;
+      text-decoration: none;
+      padding: 2dvw;
+      background: var(--c5);
+      color: var(--c10);
+      border-radius: .85dvw;
+   }
+}

@@ -110,6 +110,7 @@
   }
 
   .CurrentViewerPanel {
+    display: none;
     grid-column: 2;
     column-span: 2;
     grid-row: 8;
