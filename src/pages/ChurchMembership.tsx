@@ -3,39 +3,38 @@
 import React from "react";
 import "./ChurchMembership.css";
 
-interface Article
-{
+interface Article {
    title: string;
    ideas: Idea[];
 }
-interface Idea
-{
+interface Idea {
    heading: string;
    subideas: Subidea[];
 }
-interface Subidea
-{
+interface Subidea {
    text: string;
    keyPhrases: string[];
    relatedBibleReferences: string[];
    lists: string[];
    isBiblicalPassage: boolean;
    biblicalReference: string;
+   isBiblicallyJustifiedIdeaList: boolean;
+   biblicallyJustifiedIdeaList: BiblicallyJustifiedIdeaList[];
+}
+interface BiblicallyJustifiedIdeaList {
+   text: string;
+   biblicalReferences: string[];
 }
 
-function ChurchMembership()
-{
+function ChurchMembership() {
    const [isDataLoaded, setisDataLoaded] = React.useState(false);
    const [jsonData, setjsonData] = React.useState<Article | null>();
    const [errorMessage, seterrorMessage] = React.useState<string | null>();
    const [ideas, setideas] = React.useState<string[] | null>([]);
 
-   React.useEffect(() =>
-   {
-      const loadData = async () =>
-      {
-         try
-         {
+   React.useEffect(() => {
+      const loadData = async () => {
+         try {
             const response = await fetch("static_data/church_membership.json");
             if (!response.ok) throw new Error(`Error fetching data: ${response.status}, ${response.statusText}`);
 
@@ -44,8 +43,7 @@ function ChurchMembership()
             setjsonData(formattedData);
             setideas(formattedData.ideas.map(idea => idea.heading));
             setisDataLoaded(true);
-         } catch (error: any)
-         {
+         } catch (error: any) {
             console.error(error);
             seterrorMessage(error);
             setisDataLoaded(false);
@@ -80,8 +78,7 @@ function ChurchMembership()
 
                         const rbr = si.relatedBibleReferences && si.relatedBibleReferences.length > 0 ? si.relatedBibleReferences.reduce((acc, c) => acc.concat(", " + c)) : "";
 
-                        if (si.isBiblicalPassage && si.isBiblicalPassage)
-                        {
+                        if (si.isBiblicalPassage && si.isBiblicalPassage) {
                            return <p
                               key={index}
                               className="biblicalPassage"
@@ -94,6 +91,29 @@ function ChurchMembership()
                               </span>
                            </p>;
                         }
+
+                        if (si.isBiblicallyJustifiedIdeaList) {
+                           const ideas: BiblicallyJustifiedIdeaList[] = si.biblicallyJustifiedIdeaList
+                           return <div
+                              key={index}
+                              className=""
+                           >
+                              <ul className="biblically_justified_idea_list" >
+                                 {ideas.map((element, i) => (
+                                    <li className="biblically_justified_idea_list_item" key={i}>
+                                       <input className="biblically_justified_idea_checkbox" type="checkbox" />
+                                       {index + 1}. <span className="biblically_justified_idea_text">{element.text}</span>
+                                       <div className="biblically_justified_idea_biblical_references_container">
+                                          {element.biblicalReferences.map((br, bri) => (
+                                             <span key={bri} className="biblically_justified_idea_biblical_reference_text">{br}</span>
+                                          ))}
+                                       </div>
+                                    </li>
+                                 ))}
+                              </ul>
+                           </div>;
+                        }
+
                         return <p key={index}>
                            {si.text} <span
                               className="biblicalPassageReference">

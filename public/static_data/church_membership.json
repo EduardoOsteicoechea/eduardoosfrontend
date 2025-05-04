@@ -2,7 +2,7 @@
    "title": "Church Membership",
    "ideas": [
       {
-         "heading": "How do you define it?",
+         "heading": "How do I define Church Membership?",
          "subideas": [
             {
                "text": "Biblical membership, is the explicit limitation, of pertinent eclesiological duties and privileges, to biblical gospel believing members, of biblical local congregations, that are explicitly commited to obeying, the biblical mandates about the local church, specifically with the members and leadership of their congregation"
@@ -10,64 +10,204 @@
          ]
       },
       {
-         "heading": "How do you practice it?",
-         "subideas": [
-            {
-               "text": "We limit all eclesiological duties and privileges, to individuals validated by our current leadership, as biblical gospel believers and members of a local church"
-            },
-            {
-               "text": "This is to say, that we limit, all spiritual gift exercise, all ministry part-taking, all eclesiological duties responsibility, and all eclesiological privileges, to individuals recognized as current members of a biblical local church, by our current leadership"
-            }
-         ]
-      },
-      {
-         "heading": "Which eclesiological duties and privileges?",
-         "subideas": [
-            {
-               "text": "1. Love God above all (mat.22, ap.2.1-7)"
-            },
-            {
-               "text": "1. Preserve each other from apostasy (mat.18, stg.5.19-20, gal.6.1-5, 1.cor.5, heb.10.23-31, 1.tes.5.14)"
-            },
-            {
-               "text": "2. Protect the holyness of the church (mat.21.12-13, 1.cor.5, tit.2.3-5, ap.2.12-18)"
-            },
-            {
-               "text": "3. Protect the biblical doctrine (1.tim.3.14-15, rom.16.17-20, gal.3.1-5, ap.2.12-18)"
-            },
-            {
-               "text": "4. Learn and teach biblical doctrine in community (rom.14-15 ,Ef.3.14-19, 4.11-16)"
-            },
-            {
-               "text": "6. Advance the gospel as a body (Fil.1.27, fil.2.1-2, 1.cor.9, rom.10., 3.jn)"
-            },
-            {
-               "text": "7. Build the church through spiritual gift's and ministry exercise (rom.12., ef.5, 1.cor.12-14, ef.5.17, col.3.16, )"
-            },
-            {
-               "text": "8. Live as the family of God (Ef.4.1-4, col.3.5-17, stg.5.14-16, fil.2.1-10)"
-            },
-            {
-               "text": "9. Respond to biblical leadership (1.Tes.5, 1.tim.3, 1.ped.5, heb.13.17, 1.tim.5)"
-            },
-            {
-               "text": "10. Remember the Lord's sacrifice through the Lord's Supper (1.cor.11.17-34)"
-            }
-         ]
-      },
-      {
          "heading": "Is this practice biblical?",
          "subideas": [
             {
-               "text": "It's impossible to obey the following biblical mandates in the contemporary times without it."
+               "text": "It's currently impossible to obey the following biblical mandates without it:"
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Practice disciplinary isolation when required",
+                     "biblicalReferences":["2.tes.3.6-9"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Practice excomunion when required",
+                     "biblicalReferences":["1.cor.5."]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Sheperd the received flock",
+                     "biblicalReferences":["1.ped.5, hech.20."]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Submit to local church leadership",
+                     "biblicalReferences":["heb.13.17"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Separate ourselves from false teachers",
+                     "biblicalReferences":["rom.16.17"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Avoid spiritual comunion with unbelievers",
+                     "biblicalReferences":["2.cor.6."]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Live as a spiritual family",
+                     "biblicalReferences":["fil.2.1-3", "col.3.3-5"]
+                  }
+               ]
+            },
+            {
+               "text": "As you can see, a defined group of church members is implicit this commandments."
+            },
+            {
+               "text": "Therefore, in a similar manner that doctrines as the trinity, the hypostatic union, the 5 solas, and the tulip, church's membership is an implicitly biblical doctrine."
             }
          ]
       },
       {
-         "heading": "How does this impact's loving all believers?",
+         "heading": "Is this practice obligatory?",
          "subideas": [
             {
-               "text": "We recognize our duty of loving and having comunión with all believers. Col.1.3-5, Rom.16.1-16"
+               "text": "It's currently impossible to obey the previously discussed biblical mandates without it."
+            },
+            {
+               "text": "Every church that kares about keeping them will practice some form of church membership."
+            }
+         ]
+      },
+      {
+         "heading": "How do I suggest to practice it?",
+         "subideas": [
+            {
+               "text": "The church must limit all eclesiological duties and privileges, to individuals validated by their current leadership, as biblical gospel believers and members of a local church."
+            },
+            {
+               "text": "This is to say, that each church should limit, all spiritual gift exercise, ministry partaking, eclesiological duties, and eclesiological privileges, to individuals recognized as current members of a biblical local church, by it's current leadership."
+            }
+         ]
+      },
+      {
+         "heading": "Which are the eclesiological duties and privileges?",
+         "subideas": [
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Love God above all",
+                     "biblicalReferences":["mat.22","ap.2.1-7"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Preserve each other from apostasy",
+                     "biblicalReferences":["mat.18", "stg.5.19-20", "gal.6.1-5", "1.cor.5", "heb.10.23-31", "1.tes.5.14"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Protect the holyness of the church",
+                     "biblicalReferences":["mat.21.12-13", "1.cor.5", "tit.2.3-5", "ap.2.12-18"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Protect the biblical doctrine",
+                     "biblicalReferences":["1.tim.3.14-15", "rom.16.17-20", "gal.3.1-5", "ap.2.12-18"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Learn and teach biblical doctrine in community",
+                     "biblicalReferences":["rom.14-15" , "Ef.3.14-19", "4.11-16"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Advance the gospel as a body",
+                     "biblicalReferences":["Fil.1.27", "fil.2.1-2", "1.cor.9", "rom.10", "3.jn"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Build the church through spiritual gift's and ministry exercise",
+                     "biblicalReferences":["rom.12.", "ef.5", "1.cor.12-14", "ef.5.17", "col.3.16"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Live as the family of God",
+                     "biblicalReferences":["Ef.4.1-4", "col.3.5-17", "stg.5.14-16", "fil.2.1-10"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Respond to biblical leadershipl",
+                     "biblicalReferences":["1.Tes.5", "1.tim.3", "1.ped.5", "heb.13.17", "1.tim.5"]
+                  }
+               ]
+            },
+            {
+               "isBiblicallyJustifiedIdeaList": true,
+               "biblicallyJustifiedIdeaList": [
+                  {
+                     "text": "Remember the Lord's sacrifice through the Lord's Supper",
+                     "biblicalReferences":["1.cor.11.17-34"]
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "heading": "How does this impact's the duty of loving all believers?",
+         "subideas": [
+            {
+               "text": "We recognize our duty of loving and having comunión with all believers. Jn.17.17, Col.1.3-5, Rom.16.1-16"
             },
             {
                "text": "Therefore, we try to obey and enjoy all the inter-eclesial biblical duties and privileges. 1.cor.16"
