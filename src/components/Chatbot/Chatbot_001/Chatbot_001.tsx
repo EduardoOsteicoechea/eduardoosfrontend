@@ -72,20 +72,24 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
+
+
         const data = await response.json();
-
         console.log(data)
-
         setIsStreaming(false); // Re-enable the send button after the response
         if (data && Array.isArray(data) && data.length > 0) {
           // Assuming the last message in the array is the bot's response
           const botMessage = data[data.length - 1];
           if (botMessage.role === 'bot' && botMessage.content) {
-          setBotResponse(botMessage.content);
-          setMessages((prevMessages: Message[]) => [...prevMessages, { text: botMessage.content, sender: 'bot' }]);
+            setBotResponse(botMessage.content);
+            setMessages((prevMessages: any) => {
+              const newMessages = [...prevMessages, { text: botMessage.content, sender: 'bot' }];
+              console.log("New messages array:", newMessages); // Inspect the new array
+              return newMessages;
+            });
           } else {
-          const errorMessage = { text: 'Unexpected response format from the server.', sender: 'bot', error: true };
-          setMessages((prevMessages: any) => [...prevMessages, errorMessage]);
+            const errorMessage = { text: 'Unexpected response format from the server.', sender: 'bot', error: true };
+            setMessages((prevMessages: any) => [...prevMessages, errorMessage]);
           }
         } else {
           const errorMessage = { text: 'No response or invalid response format received from the server.', sender: 'bot', error: true };
