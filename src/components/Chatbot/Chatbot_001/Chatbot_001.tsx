@@ -32,7 +32,7 @@ import "./Chatbot_001.css";
     const now = new Date();
     const hours = now.getHours();
     const minutes = now.getMinutes();
-    const formattedTime = `<span class="math-inline">\{hours\}\:</span>{minutes < 10 ? '0' + minutes : minutes}`;
+    const formattedTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
     return formattedTime;
   }
 
