@@ -1,4 +1,4 @@
-import "./Chatbot_001.css";
+ import "./Chatbot_001.css";
  import React, { useEffect, useRef, useState } from 'react';
 
  interface Chatbot_001Props {
@@ -43,13 +43,13 @@ import "./Chatbot_001.css";
    event.preventDefault();
    if (userPrompt.trim()) {
     const newUserMessage: DeepSeekChatMessage = { role: 'user', content: userPrompt };
-    setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, newUserMessage]);
+    setMessages([newUserMessage]); // Reset the chat history with the new user message
     setUserPrompt('');
     setIsStreaming(true); // Keep this to disable the send button during the request
     setCurrentTime(getCurrentHourMinute());
 
     const requestBody = {
-     previous_messages: messages.map(msg => ({ role: msg.role, content: msg.content })),
+     previous_messages: [], // Since we are resetting, no previous messages
      message: { role: 'user', content: userPrompt },
     };
 
@@ -73,26 +73,17 @@ import "./Chatbot_001.css";
      const data = await response.json() as DeepSeekChatMessage[];
      console.log(data);
      setIsStreaming(false); // Re-enable the send button after the response
-     setMessages(data)
-    //  if (data && Array.isArray(data) && data.length > 0) {
-    //   // Assuming the last message in the array is the bot's response
-    //   const botMessage = data[data.length - 1];
-
-    //   if (botMessage.role === 'bot' && botMessage.content) {
-    //    setMessages(data); // Update the entire messages array with the new response
-    //   } else {
-    //    const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'Unexpected response format from the server.', error: true };
-    //    setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, errorMessage]);
-    //   }
-    //  } else {
-    //   const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'No response or invalid response format received from the server.', error: true };
-    //   setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, errorMessage]);
-    //  }
+     if (Array.isArray(data) && data.length > 0) {
+      setMessages(data); // Set the messages state to the new response array
+     } else {
+      const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'Unexpected response format from the server.', error: true };
+      setMessages([newUserMessage, errorMessage]); // Display error with user message
+     }
     } catch (error) {
      console.error('Error sending request:', error);
      setIsStreaming(false); // Re-enable the send button in case of an error
      const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'An error occurred while processing your request.', error: true };
-     setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, errorMessage]);
+     setMessages([newUserMessage, errorMessage]); // Display error with user message
     }
    }
   };
@@ -111,8 +102,6 @@ import "./Chatbot_001.css";
        {msg.error && <span className="Chatbot_001_chat_display_error_message"> (Error)</span>}
       </div>
      ))}
-     {/* Removed the conditional rendering for botResponse during isStreaming */}
-     {/* We are now relying on the messages array to display the bot's response */}
      <div ref={chatEndRef} />
     </div>
 
