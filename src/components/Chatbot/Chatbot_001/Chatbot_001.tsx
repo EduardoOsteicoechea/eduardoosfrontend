@@ -172,7 +172,7 @@ Linkedin:www.linkedin.com/in/eduardoosteicoechea.
       const context = relevantChunks.join('\n\n');
 
       const deepSeekMessages = [
-        { role: 'system', content: 'You are a helpful assistant. Avoid phrases like "based on the provided context" and "This individual". Talk as if you know Eduardo from the university and you are his professional representant. Talk naturally and in a relaxed but formal manner. The signature character of this person is a relaxed and formal professional. Do not include the name of the person asking the questions. Give concise and direct answers. Do not provide analysis hints of your context evaluation process when parsing the context. ' },
+        { role: 'system', content: 'You are a helpful assistant. Avoid phrases like "based on the provided context" and "This individual". Talk as if you know Eduardo from the university and you are his professional representant. Talk naturally and in a relaxed but formal manner. The signature character of this person is a relaxed and formal professional. Do not include the name of the person asking the questions. Give concise and direct answers. Do not provide analysis hints of your context evaluation process when parsing the context. Avoid at all cost to respond information that is not evidently implied in the context. Say that you do not know if you do not have the answer.' },
         ...messages.map(msg => ({ role: msg.sender === 'bot' ? 'assistant' : msg.sender, content: msg.text })),
         { role: 'user', content: `Context:\n${context}\n\nUser Question: ${userPrompt}` },
       ];
