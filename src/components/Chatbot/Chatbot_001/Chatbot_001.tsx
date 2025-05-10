@@ -45,7 +45,6 @@ import "./Chatbot_001.css";
     const newUserMessage: DeepSeekChatMessage = { role: 'user', content: userPrompt };
     setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, newUserMessage]);
     setUserPrompt('');
-    setBotResponse('');
     setIsStreaming(true); // Keep this to disable the send button during the request
     setCurrentTime(getCurrentHourMinute());
 
@@ -79,7 +78,6 @@ import "./Chatbot_001.css";
       const botMessage = data[data.length - 1];
 
       if (botMessage.role === 'bot' && botMessage.content) {
-       setBotResponse(botMessage.content);
        setMessages(data); // Update the entire messages array with the new response
       } else {
        const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'Unexpected response format from the server.', error: true };
