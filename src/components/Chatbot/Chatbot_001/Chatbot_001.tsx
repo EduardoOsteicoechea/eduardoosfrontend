@@ -66,6 +66,8 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({
           body: JSON.stringify(requestBody),
         });
 
+        console.log(response)
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
