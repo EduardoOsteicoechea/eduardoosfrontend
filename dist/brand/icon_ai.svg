@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
-   sodipodi:docname="icons.svg"
+   sodipodi:docname="icons_ccc.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="0.32"
-     inkscape:cx="4023.4375"
-     inkscape:cy="4298.4375"
+     inkscape:zoom="0.0625"
+     inkscape:cx="3432"
+     inkscape:cy="2632"
      inkscape:window-width="1366"
      inkscape:window-height="697"
      inkscape:window-x="-8"
@@ -180,75 +180,30 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="iconsBackgrounds"
-     transform="translate(-1280,-1280)">
+     transform="translate(1360,-1352)">
     <rect
-       style="fill:#ffffff;stroke-width:0.910677"
-       id="rect7"
+       style="fill:#1fb511;fill-opacity:0;stroke-width:0.910677"
+       id="rect3"
        width="1024"
        height="1024"
-       x="1280"
-       y="1280" />
+       x="-1360"
+       y="1352"
+       inkscape:export-filename="icon_ai.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path25"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:100"
+       d="m -970.19531,1663.6289 -136.67189,380.3399 75.2813,27.0468 27.4062,-76.25 h 148.03517 l 27.4043,76.25 75.28711,-27.0468 -136.67188,-380.3399 z m 40.03515,125.1602 45.26954,125.9687 h -90.53516 z" />
   </g>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-1280,-1280)">
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:68;stroke-dasharray:none;stroke-opacity:1"
-       id="rect707"
-       width="40.622715"
-       height="411.22153"
-       x="2129.3647"
-       y="926.09808"
-       transform="rotate(19.765758)" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:68;stroke-dasharray:none;stroke-opacity:1"
-       id="rect708"
-       width="40.622715"
-       height="411.22153"
-       x="-1088.838"
-       y="2082.5503"
-       transform="matrix(-0.94108304,0.33817556,0.33817556,0.94108304,0,0)" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:79.1328;stroke-dasharray:none;stroke-opacity:1"
-       id="rect709"
-       width="188.32713"
-       height="40.622715"
-       x="1615.9629"
-       y="1862.4524" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:68;stroke-dasharray:none;stroke-opacity:1"
-       id="rect710"
-       width="38.229347"
-       height="57.019905"
-       x="1690.7255"
-       y="1591.6344" />
-    <rect
-       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:68;stroke-dasharray:none;stroke-opacity:1"
-       id="rect711"
-       width="54.639988"
-       height="392.6907"
-       x="1922.0197"
-       y="1591.6344" />
+     transform="translate(1360,-1352)">
     <path
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:80;stroke-dasharray:none;stroke-opacity:1"
-       d="m 1570.775,1985.4967 139.0649,-386.9935 139.0651,386.9935"
-       id="path774" />
-    <path
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:80;stroke-dasharray:none;stroke-opacity:1"
-       d="M 1615.9629,1882.7637 H 1804.29"
-       id="path775" />
-    <path
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:80;stroke-dasharray:none;stroke-opacity:1"
-       d="M 1949.3397,1984.3251 V 1591.6344"
-       id="path776" />
-    <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:68;stroke-dasharray:none;stroke-opacity:1"
-       id="rect776"
-       width="383.24149"
-       height="194.7594"
-       x="1538.7782"
-       y="1396.875" />
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:80;stroke-dasharray:none;stroke-opacity:1"
+       d="M -690.6603,2056.3251 V 1663.6344"
+       id="path24" />
   </g>
 </svg>
