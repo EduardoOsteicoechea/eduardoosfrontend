@@ -114,10 +114,11 @@
   .current_viewer_panel {
     /* display: none; */
     grid-column: 2;
-    column-span: 2;
+    column-span: 1;
     grid-row: 8;
-    width: 93.0dvw;
+    width: 90.0dvw;
     height: 100dvw;
+    padding: 2dvw;
   }
 
   .hero_heading_container {
