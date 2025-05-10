@@ -71,6 +71,9 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({
         }
 
         const data = await response.json();
+
+        console.log(data)
+
         setIsStreaming(false); // Re-enable the send button after the response
         if (data && Array.isArray(data) && data.length > 0) {
           // Assuming the last message in the array is the bot's response
