@@ -1,0 +1,94 @@
+.Chatbot_001
+{
+ display: flex;
+ flex-direction: column;
+ gap: .5dvw;
+ height: 100%;
+ width: 100%;
+}
+
+.Chatbot_001_chat_display
+{
+ display: flex;
+ flex-direction: column;
+  overflow-y: auto;
+ gap: .5dvw;
+  height: 85%;
+  background: var(--c2);
+  padding: .75dvw;
+}
+.Chatbot_001_chat_display_message
+{
+  height: fit-content;
+  font-size: 1dvw;
+ display: flex;
+ flex-direction: column;
+ gap: .25dvw;
+
+}
+.Chatbot_001_chat_display_message_user
+{
+  height: fit-content;
+  font-size: 1dvw;
+  background: var(--c1);
+  margin-right: 20%;
+  padding: .75dvw;
+  width: fit-content !important;
+  min-width: 30%;
+
+}
+.Chatbot_001_chat_display_message_bot
+{
+  background: var(--c1);
+  margin-left: 20%;
+  padding: .75dvw;
+}
+.Chatbot_001_chat_display_message_subject
+{
+  line-height: 1dvw;
+  font-size: 1dvw;
+  color: var(--c6) !important;
+}
+.Chatbot_001_chat_display_message_content
+{
+  line-height: 1.5dvw;
+  font-size: 1dvw;
+}
+.Chatbot_001_chat_display_error_message
+{
+  line-height: 1dvw;
+  font-size: 1dvw;
+}
+
+
+.Chatbot_001_input_form
+{
+  height: 15%;
+  display: flex;
+  align-items: center;
+ gap: .5dvw;
+}
+
+.Chatbot_001_input_form_text_area
+{
+  resize: none; -webkit-appearance: none; -moz-appearance: none; appearance: none;
+  width: 85%;
+  height: 100%;
+  padding: .75dvw;
+  font-size: 1dvw;
+  overflow-y: auto;
+  background: var(--c3);
+}
+
+.Chatbot_001_input_form_send_button
+{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1dvw;
+  width: 15%;
+  padding: .2dvw .5dvw;
+  background: var(--c10);
+  color: var(--c1) !important;
+}

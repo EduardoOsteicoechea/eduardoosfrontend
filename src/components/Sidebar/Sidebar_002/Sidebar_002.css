@@ -1,0 +1,12 @@
+.Sidebar_002 {
+  display: flex !important;
+  background: var(--c1);
+}
+
+
+@media only screen and (max-width: 620px) {
+  .Sidebar_002 {
+    display: none !important;
+  }
+
+}

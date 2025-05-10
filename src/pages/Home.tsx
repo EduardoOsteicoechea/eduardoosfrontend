@@ -1,11 +1,11 @@
-import Hero001 from "../components/Hero/Hero001/Hero001";
+import Hero_001 from "../components/Hero/Hero_001/Hero_001";
 
 
 function Home() {
 
    return (
       <>
-         <Hero001></Hero001>
+         <Hero_001/>
       </>
    );
  }
