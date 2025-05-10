@@ -16,7 +16,6 @@ import "./Chatbot_001.css";
  }) => {
   const [messages, setMessages] = useState<DeepSeekChatMessage[]>([]);
   const [userPrompt, setUserPrompt] = useState('');
-  const [botResponse, setBotResponse] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
   const [currentTime, setCurrentTime] = useState('');
   const chatEndRef = useRef<HTMLDivElement>(null);
