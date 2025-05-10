@@ -80,13 +80,15 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({
         if (data && Array.isArray(data) && data.length > 0) {
           // Assuming the last message in the array is the bot's response
           const botMessage = data[data.length - 1];
+
           if (botMessage.role === 'bot' && botMessage.content) {
             setBotResponse(botMessage.content);
-            setMessages((prevMessages: any) => {
-              const newMessages = [...prevMessages, { text: botMessage.content, sender: 'bot' }];
-              console.log("New messages array:", newMessages); // Inspect the new array
-              return newMessages;
-            });
+            // setMessages((prevMessages: any) => {
+            //   const newMessages = [...prevMessages, { text: botMessage.content, sender: 'bot' }];
+            //   console.log("New messages array:", newMessages); // Inspect the new array
+            //   return newMessages;
+            // });
+            setMessages(data);
           } else {
             const errorMessage = { text: 'Unexpected response format from the server.', sender: 'bot', error: true };
             setMessages((prevMessages: any) => [...prevMessages, errorMessage]);
