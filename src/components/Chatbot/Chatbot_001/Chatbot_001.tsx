@@ -73,20 +73,21 @@ import "./Chatbot_001.css";
      const data = await response.json() as DeepSeekChatMessage[];
      console.log(data);
      setIsStreaming(false); // Re-enable the send button after the response
-     if (data && Array.isArray(data) && data.length > 0) {
-      // Assuming the last message in the array is the bot's response
-      const botMessage = data[data.length - 1];
+     setMessages(data)
+    //  if (data && Array.isArray(data) && data.length > 0) {
+    //   // Assuming the last message in the array is the bot's response
+    //   const botMessage = data[data.length - 1];
 
-      if (botMessage.role === 'bot' && botMessage.content) {
-       setMessages(data); // Update the entire messages array with the new response
-      } else {
-       const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'Unexpected response format from the server.', error: true };
-       setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, errorMessage]);
-      }
-     } else {
-      const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'No response or invalid response format received from the server.', error: true };
-      setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, errorMessage]);
-     }
+    //   if (botMessage.role === 'bot' && botMessage.content) {
+    //    setMessages(data); // Update the entire messages array with the new response
+    //   } else {
+    //    const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'Unexpected response format from the server.', error: true };
+    //    setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, errorMessage]);
+    //   }
+    //  } else {
+    //   const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'No response or invalid response format received from the server.', error: true };
+    //   setMessages((prevMessages: DeepSeekChatMessage[]) => [...prevMessages, errorMessage]);
+    //  }
     } catch (error) {
      console.error('Error sending request:', error);
      setIsStreaming(false); // Re-enable the send button in case of an error
