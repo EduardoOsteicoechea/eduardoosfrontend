@@ -74,7 +74,7 @@ function Responding_to_hard_discipline() {
                <h1 className="article_heading">{jsonData.title}</h1>
 
                <section className="article_intro_section">
-                  {jsonData.introduction_ideas?.map((ii, iiIndex) => <p className="article_intro_section_paragraph">{ii.text}</p>)}
+                  {jsonData.introduction_ideas?.map((ii, iiIndex) => <p key={iiIndex} className="article_intro_section_paragraph">{ii.text}</p>)}
                </section>
 
                <section className="reference_to_article_headings_section">
