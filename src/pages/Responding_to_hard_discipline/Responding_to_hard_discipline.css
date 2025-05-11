@@ -26,7 +26,7 @@
 .article_intro_section {
    display: flex;
    flex-direction: column;
-   gap: .75rem;
+   gap: 1.2rem;
 }
 
 .article_intro_section_heading {
@@ -153,28 +153,29 @@
       flex-direction: column;
       gap: .75rem;
    }
+
    .reference_to_article_headings_list_heading {
       font-family: f1b;
       line-height: 1.35rem;
       margin-bottom: 3dvw;
    }
+
    .reference_to_article_heading_list {
       display: flex;
       flex-direction: column;
       gap: .5rem;
+      padding: 0 5dvw;
    }
 
-   .biblically_justified_idea_list {
-
-   }
+   .biblically_justified_idea_list {}
 
    .biblically_justified_idea_list_item {
       margin-bottom: .5rem;
    }
 
-.reference_to_article_heading_list>li {
-      padding: 0 5dvw;
-}
+   .reference_to_article_heading_list>li {
+      padding: 1dvw 4dvw;
+   }
 
    .biblically_justified_idea_checkbox {
       margin-right: .5rem;
