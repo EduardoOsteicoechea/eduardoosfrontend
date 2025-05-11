@@ -6,7 +6,7 @@
    width: 100%;
 }
 
-.ArticlePage001 > article {
+.ArticlePage001>article {
    margin: auto;
    max-width: 600px;
    width: 100%;
@@ -18,41 +18,43 @@
 .article_heading {
    font-family: f1b;
    font-size: 2rem;
+   line-height: 2.35rem;
 }
 
 
 
-.article_intro_section
-{
+.article_intro_section {
    display: flex;
    flex-direction: column;
    gap: .75rem;
 }
-.article_intro_section_heading
-{
+
+.article_intro_section_heading {
    font-family: f1b;
-}
-.article_intro_section_paragraph
-{
-   
+   line-height: 1.35rem;
 }
 
+.article_intro_section_paragraph {}
 
-.reference_to_article_headings_section
-{
+
+.reference_to_article_headings_section {
    display: flex;
    flex-direction: column;
    gap: .75rem;
 }
-.reference_to_article_headings_list_heading
-{
+
+.reference_to_article_headings_list_heading {
    font-family: f1b;
+   line-height: 1.35rem;
+   margin-bottom: 3dvw;
 }
-.reference_to_article_heading_list{
+
+.reference_to_article_heading_list {
    display: flex;
    flex-direction: column;
    gap: .5rem;
 }
+
 .reference_to_article_heading_list>li {
    display: flex;
    align-items: center;
@@ -62,6 +64,7 @@
    background: var(--c1);
    padding: .5dvw 2dvw .5dvw 1dvw;
 }
+
 .reference_to_article_heading {
    font-family: f1r;
    text-decoration: none;
@@ -69,6 +72,7 @@
    border-radius: .25dvw;
    width: 100%;
 }
+
 
 .ArticleIdea {
    display: flex;
@@ -86,6 +90,7 @@
 
 .ArticleIdeaHeading {
    font-family: f1b;
+   line-height: 1.75rem;
 }
 
 .biblicalPassage {
@@ -142,22 +147,45 @@
       border-radius: .85dvw;
    }
 
-   .biblically_justified_idea_list{
+
+   .reference_to_article_headings_section {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
    }
+   .reference_to_article_headings_list_heading {
+      font-family: f1b;
+      line-height: 1.35rem;
+      margin-bottom: 3dvw;
+   }
+   .reference_to_article_heading_list {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+   }
+
+   .biblically_justified_idea_list {
+
+   }
+
    .biblically_justified_idea_list_item {
       margin-bottom: .5rem;
    }
-   
+
+.reference_to_article_heading_list>li {
+      padding: 0 5dvw;
+}
+
    .biblically_justified_idea_checkbox {
       margin-right: .5rem;
       height: .85rem;
       width: .85rem;
    }
-   
+
    .biblically_justified_idea_text {
       font-family: f1r;
    }
-   
+
    .biblically_justified_idea_biblical_references_container {
       display: flex;
       flex-wrap: wrap;
@@ -165,7 +193,7 @@
       margin-top: .35rem;
       padding: 0 0 0 0rem;
    }
-   
+
    .biblically_justified_idea_biblical_reference_text {
       background: var(--c1);
       padding: 0 .5rem;
