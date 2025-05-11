@@ -130,6 +130,11 @@ function Header001() {
             onClick={handleHeader001MenuButtonClick}
             >Church Membership</Link>
                </li>
+               <li>
+                  <Link to="/responding_to_hard_discipline"
+            onClick={handleHeader001MenuButtonClick}
+            >Responding to hard discipline</Link>
+               </li>
             </ul>
          </nav>
       </>
