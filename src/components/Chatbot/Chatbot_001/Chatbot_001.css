@@ -195,7 +195,7 @@
   }
   
   .Chatbot_001_chat_display_message_assistant {
-    background: var(--c1);
+    background: var(--c1); 
     margin-left: 20%;
     padding: .75dvw;
   }
