@@ -38,56 +38,50 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({ }) => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    
     if (userPrompt.trim()) {
       const newUserMessage: DeepSeekChatMessage = { role: 'user', content: userPrompt };
 
-      setMessages((prevMessages) => {
-        let updatedMessages = [...prevMessages, newUserMessage];
-        console.log('messages (after user message):\n\n' + JSON.stringify(updatedMessages));
+      setMessages((prevMessages) => [...prevMessages, newUserMessage]);
+      setUserPrompt('');
+      setIsStreaming(true);
+      setCurrentTime(getCurrentHourMinute());
 
-        setIsStreaming(true);
-        setCurrentTime(getCurrentHourMinute());
+      const requestBody = {
+        previous_messages: messages,
+        message: { role: 'user', content: userPrompt },
+      };
 
-        const requestBody = {
-          previous_messages: prevMessages,
-          message: { role: 'user', content: userPrompt },
-        };
+      console.log(requestBody);
 
-        console.log('requestBody:\n\n' + JSON.stringify(requestBody));
-
-        fetch('https://eduardoos.com/chatbot/about/eduardo', {
+      try {
+        const response = await fetch('https://eduardoos.com/chatbot/about/eduardo', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(requestBody),
-        })
-          .then(response => {
-            console.log('response:', response);
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json() as Promise<DeepSeekChatMessage>;
-          })
-          .then(data => {            
-            console.log('data:', data);
-            setMessages((previousMessages:any)=>[...previousMessages, data])
-            updatedMessages = [...updatedMessages, data]
-            console.log('updatedMessages:', updatedMessages);
-            setIsStreaming(false);
-          })
-          .catch(error => {
-            const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'An error occurred while processing your request.' };
-            updatedMessages = [...updatedMessages, errorMessage]
-            console.error('updatedMessages:', updatedMessages);
-            setIsStreaming(false);
-          });
+        });
 
-        return updatedMessages; // Return the updated state
-      });
+        console.log(response);
 
-      setUserPrompt('');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json() as DeepSeekChatMessage;
+        console.log('data:\n' + data);
+
+        setMessages((previousMessages) => [...previousMessages, data]);
+        console.log('messages:\n\n' + messages);
+
+        setIsStreaming(false);
+
+      } catch (error) {
+        console.error('Error sending request:', error);
+        setIsStreaming(false);
+        const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'An error occurred while processing your request.' };
+        setMessages((previousMessages) => [...previousMessages, errorMessage]);
+      }
     }
   };
 
