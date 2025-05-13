@@ -230,7 +230,7 @@
       appearance: none;
       width: 75%;
       height: 100%;
-      padding: .75dvw;
+      padding: 1.5dvw 1.75dvw;
       font-size: 1rem;
       overflow-y: auto;
       background: var(--c3);
@@ -248,23 +248,23 @@
       .Chatbot_001_input_form_send_help_buttons_container {
         display: flex;
         width: 100%;
-        height: 50% !important;
+        height: 40% !important;
         gap: 1dvw;
 
         .Chatbot_001_input_form_sample_prompt_button {
-          width: 50%;
+          width: 40%;
           font-size: 1rem;
           border-radius: .2dvw;
         }
 
         .Chatbot_001_input_form_help_on_what_to_ask_button {
-          width: 50%;
+          width: 40%;
           font-size: 1rem;
           border-radius: .2dvw;
         }
 
         .Chatbot_001_input_form_reset_chat_button {
-          width: 50%;
+          width: 40%;
           font-size: 1rem;
           border-radius: .2dvw;
         }
@@ -277,7 +277,7 @@
         font-size: 1rem;
         background: var(--c10);
         color: var(--c1) !important;
-        height: 50% !important;
+        height: 60% !important;
         border-radius: .2dvw;
       }
     }
