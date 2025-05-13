@@ -79,6 +79,8 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({ }) => {
           })
           .catch(error => {
             const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'An error occurred while processing your request.' };
+            console.error(error);
+            ('updatedMessages:', updatedMessages);
             updatedMessages = [...updatedMessages, errorMessage]
             console.error('updatedMessages:', updatedMessages);
             setIsStreaming(false);
