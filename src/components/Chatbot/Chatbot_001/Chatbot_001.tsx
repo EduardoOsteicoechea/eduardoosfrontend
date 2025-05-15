@@ -15,11 +15,11 @@ const Chatbot_001: React.FC = () => {
   const chatEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (messages.length > 0 && chatEndRef.current) {
-      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages]);
+  // useEffect(() => {
+  //   if (messages.length > 0 && chatEndRef.current) {
+  //     chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // }, [messages]);
 
   function getCurrentHourMinute() {
     const now = new Date();
