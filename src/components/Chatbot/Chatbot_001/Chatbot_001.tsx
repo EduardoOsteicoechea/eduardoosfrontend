@@ -1,16 +1,13 @@
+import HasForbiddenCharacters from "../../../Helpers/ForbiddenCharacters";
 import "./Chatbot_001.css";
 import React, { useEffect, useRef, useState } from 'react';
-
-interface Chatbot_001Props {
-
-}
 
 interface DeepSeekChatMessage {
   role: string;
   content: string;
 }
 
-const Chatbot_001: React.FC<Chatbot_001Props> = ({ }) => {
+const Chatbot_001: React.FC = () => {
   const [messages, setMessages] = useState<DeepSeekChatMessage[]>([]);
   const [userPrompt, setUserPrompt] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
@@ -33,7 +30,13 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({ }) => {
   }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setUserPrompt(event.target.value);
+    const inputValue = event.target.value
+    let result: [boolean, string] = HasForbiddenCharacters(inputValue)
+    if(result[0]){
+      alert(`"${result[1]}" is a forbidden character`)
+    }else{
+      setUserPrompt(event.target.value);
+    }
   };
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -92,9 +95,22 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({ }) => {
     }
   };
 
+  const handleChatbot_001_input_form_sample_prompt_buttonClick = ()=>{
+    setUserPrompt("Please resume Eduard's professional profile")
+
+  }
+
+  const handleChatbot_001_input_form_reset_chat_buttonClick = ()=>{
+    setUserPrompt("")
+
+  }
+
   return (
     <div className="Chatbot_001">
-      <div className="Chatbot_001_chat_display" ref={chatContainerRef}>
+      <div 
+      className={`Chatbot_001_chat_display ${messages.length > 0 ? "Chatbot_001_chat_display_expanded" : "Chatbot_001_chat_display_contracted"}`}
+      ref={chatContainerRef}
+      >
         {messages.map((msg, index) => (
           <div key={index} className={`Chatbot_001_chat_display_message Chatbot_001_chat_display_message_${msg.role}`}>
             <strong className="Chatbot_001_chat_display_message_subject">
@@ -111,21 +127,27 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({ }) => {
 
       <form onSubmit={handleSubmit} className="Chatbot_001_input_form">
         <textarea
-          className="Chatbot_001_input_form_text_area"
+          className={`Chatbot_001_input_form_text_area ${messages.length > 0 ? "Chatbot_001_input_form_text_area_expanded" : "Chatbot_001_input_form_text_area_contracted"}`}
           value={userPrompt}
           onChange={handleInputChange}
-          placeholder="Ask about Eduardo..."
+          placeholder="Ask my AI agent about me..."
           spellCheck="false"
         />
         <div className="Chatbot_001_input_form_send_buttons_container">
           <div className="Chatbot_001_input_form_send_help_buttons_container">
-            <div className="Chatbot_001_input_form_sample_prompt_button">
+            <div 
+            className="Chatbot_001_input_form_sample_prompt_button"
+            onClick={handleChatbot_001_input_form_sample_prompt_buttonClick}
+            >
               a
             </div>
             <div className="Chatbot_001_input_form_help_on_what_to_ask_button">
               a
             </div>
-            <div className="Chatbot_001_input_form_reset_chat_button">
+            <div 
+            className="Chatbot_001_input_form_reset_chat_button"
+            onClick={handleChatbot_001_input_form_reset_chat_buttonClick}
+            >
               a
             </div>
           </div>

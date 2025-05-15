@@ -117,7 +117,7 @@
     column-span: 1;
     grid-row: 8;
     width: 90.0dvw;
-    height: 100dvw;
+    /* height: 100dvw; */
     padding: 2dvw;
   }
 
