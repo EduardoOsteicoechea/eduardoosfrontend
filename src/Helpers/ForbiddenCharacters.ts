@@ -26,7 +26,7 @@ export default function HasForbiddenCharacters(input: string):[boolean,string]
   );
 
   for (const fch of forbiddenCharacters) {
-    if (input.includes(fch)) {
+    if (wordArray?.includes(fch)) {
       return [true,fch]
     }
   }
