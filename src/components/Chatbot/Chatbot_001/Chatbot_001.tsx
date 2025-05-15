@@ -103,7 +103,7 @@ const Chatbot_001: React.FC = () => {
   };
 
   const handleChatbot_001_input_form_sample_prompt_buttonClick = ()=>{
-    setUserPrompt("Please resume Eduard's professional profile")
+    setUserPrompt("Please resume Eduardo's professional profile")
 
   }
 
