@@ -51,7 +51,7 @@
 
 .ui_options_dashboard_container {
   padding: .75dvw 0;
-  grid-column: 4;
+  grid-column: 4 / 2;
   grid-row: 2;
   display: flex;
   justify-content: flex-start;
@@ -93,7 +93,8 @@
 @media only screen and (max-width: 620px) {
   .Hero_001 {
     grid-template-columns: 5dvw 42.5dvw 5dvw 42.5dvw 5dvw;
-    grid-template-rows: 5dvw 5dvw 3dvw 30dvw 3dvw 8dvw 5dvw auto 5dvw;
+    grid-template-rows: 5dvw 15dvw 3dvw 30dvw 0dvw 0dvw 05dvw auto 5dvw;
+    /* grid-template-rows: 5dvw 5dvw 3dvw 30dvw 3dvw 8dvw 5dvw auto 5dvw; */
     height: fit-content;
     width: 100%;
     /* border: solid 1px red; */
@@ -117,7 +118,7 @@
     column-span: 1;
     grid-row: 8;
     width: 90.0dvw;
-    /* height: 100dvw; */
+    max-height: 130dvw;
     padding: 2dvw;
   }
 
@@ -130,7 +131,7 @@
   }
   .hero_heading_container_heading {
     display: block;
-    font-size: 4.75dvw;
+    font-size: 3.75dvw;
     font-family: f1bl;
   }
   .ui_options_dashboard_container {
@@ -152,7 +153,8 @@
     border: none;
   }
   .ui_options_dashboard_action_button {
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     grid-column: 4;
     grid-row: 6;

@@ -16,7 +16,7 @@ function Hero_001() {
 
       <div className="hero_heading_container">
         <h1 className="hero_heading_container_heading">
-          Multitask Role
+          Ethical Thinker - BIM Architect - Fullstack Software Developer
         </h1>
       </div>
       
