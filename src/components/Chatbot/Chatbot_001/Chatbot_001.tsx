@@ -26,7 +26,7 @@ const Chatbot_001: React.FC = () => {
     if (textareaRef.current) {
       textareaRef.current.focus();
     }
-  }, []);
+  }, [messages]);
 
   function getCurrentHourMinute() {
     const now = new Date();
