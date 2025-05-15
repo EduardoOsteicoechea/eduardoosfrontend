@@ -255,6 +255,11 @@
       border-bottom-right-radius: .8dvw;
     }
 
+    .Chatbot_001_input_form_text_area:focus {
+      border: solid 1dvw var(--c10);
+      border-radius: 2dvw;
+    }
+
     .Chatbot_001_input_form_send_buttons_container {
       width: 25%;
       height: 100%;

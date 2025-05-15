@@ -14,12 +14,19 @@ const Chatbot_001: React.FC = () => {
   const [currentTime, setCurrentTime] = useState('');
   const chatEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   // useEffect(() => {
   //   if (messages.length > 0 && chatEndRef.current) {
   //     chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
   //   }
   // }, [messages]);
+  
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, []);
 
   function getCurrentHourMinute() {
     const now = new Date();
@@ -132,6 +139,7 @@ const Chatbot_001: React.FC = () => {
           onChange={handleInputChange}
           placeholder="Ask my AI agent about me..."
           spellCheck="false"
+          ref={textareaRef}
         />
         <div className="Chatbot_001_input_form_send_buttons_container">
           <div className="Chatbot_001_input_form_send_help_buttons_container">
