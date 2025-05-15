@@ -235,6 +235,7 @@
 
 
   .Chatbot_001_input_form {
+    margin-top: auto;
     height: auto;
     display: flex;
     align-items: center;
