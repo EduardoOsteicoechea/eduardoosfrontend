@@ -10,11 +10,12 @@
    --c7: #777;
    --c7: #444;
    --c10: #000;
+   --ac1: rgb(255, 166, 0);
 }
 
 body
 {
-   background: var(--c3);
+   background: var(--c1);
 }
 
 .light_background_strong_foreground

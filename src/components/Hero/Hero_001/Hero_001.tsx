@@ -1,5 +1,4 @@
 import Chatbot_001 from "../../Chatbot/Chatbot_001/Chatbot_001"
-import Sidebar_002 from "../../Sidebar/Sidebar_002/Sidebar_002"
 import "./Hero_001.css"
 
 function Hero_001() {
@@ -63,8 +62,7 @@ function Hero_001() {
         </button>
       </div>      
 
-      {/* <Sidebar_002 grid_row="2" grid_row_span="3" grid_column="6" grid_column_span="1"/> */}
-
+    
     </div>
   )
 }

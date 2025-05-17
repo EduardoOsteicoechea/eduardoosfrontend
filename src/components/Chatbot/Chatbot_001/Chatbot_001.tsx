@@ -78,7 +78,7 @@ const Chatbot_001: React.FC = () => {
 
       setMessages((prevMessages) => {
         let updatedMessages = [...prevMessages, newUserMessage];
-        console.log('messages (after user message):\n\n' + JSON.stringify(updatedMessages));
+        // console.log('messages (after user message):\n\n' + JSON.stringify(updatedMessages));
 
         setIsStreaming(true);
         setCurrentTime(getCurrentHourMinute());
@@ -88,7 +88,7 @@ const Chatbot_001: React.FC = () => {
           message: { role: 'user', content: userPrompt },
         };
 
-        console.log('requestBody:\n\n' + JSON.stringify(requestBody));
+        // console.log('requestBody:\n\n' + JSON.stringify(requestBody));
 
         fetch('https://eduardoos.com/chatbot/about/eduardo', {
           method: 'POST',
@@ -98,19 +98,19 @@ const Chatbot_001: React.FC = () => {
           body: JSON.stringify(requestBody),
         })
           .then(response => {
-            console.log('response:', response);
+            // console.log('response:', response);
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
             }
-            console.log('Response OK, attempting to read text...');
+            // console.log('Response OK, attempting to read text...');
             return response.text();
           })
           .then(data => {
-            console.log('Data received:', data);
+            // console.log('Data received:', data);
             const responseMessage: DeepSeekChatMessage = { role: 'assistant', content: data };
             updatedMessages = [...updatedMessages, responseMessage];
             setMessages((prevMessages) => [...prevMessages, responseMessage]);
-            console.log('updatedMessages:', updatedMessages);
+            // console.log('updatedMessages:', updatedMessages);
             setIsStreaming(false);
           })
           .catch(error => {
@@ -118,7 +118,7 @@ const Chatbot_001: React.FC = () => {
             const responseMessage: DeepSeekChatMessage = { role: 'assistant', content: 'An error occurred while processing your request.' };
             updatedMessages = [...updatedMessages, responseMessage];
             setMessages((prevMessages) => [...prevMessages, responseMessage]);
-            console.error('updatedMessages (error):', updatedMessages);
+            // console.error('updatedMessages (error):', updatedMessages);
             setIsStreaming(false);
           });
 
