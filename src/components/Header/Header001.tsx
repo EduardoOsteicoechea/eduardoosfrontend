@@ -71,7 +71,7 @@ function Header001() {
    return (
       <>
          <div
-            className="Header001"
+            className="pageHeader Header001"
          >
             <Link 
             to="/"
@@ -134,6 +134,11 @@ function Header001() {
                   <Link to="/responding_to_hard_discipline"
             onClick={handleHeader001MenuButtonClick}
             >Responding to hard discipline</Link>
+               </li>
+               <li>
+                  <Link to="/before_the_role_and_the_tragedy"
+            onClick={handleHeader001MenuButtonClick}
+            >Before the Role and the Tragedy</Link>
                </li>
             </ul>
          </nav>

@@ -5,7 +5,7 @@ import "./Hero_001.css"
 function Hero_001() {
 
   return (
-    <div className="Hero_001">
+    <div className="pageContent Hero_001">
       <div className="personal_photo_container">
         <img className="personal_photo_container_image" src="/personal_photo_no_background_1920x1920.png" alt="Profile Photo" height="100%" />
       </div>
@@ -63,7 +63,7 @@ function Hero_001() {
         </button>
       </div>      
 
-      <Sidebar_002 grid_row="2" grid_row_span="3" grid_column="6" grid_column_span="1"/>
+      {/* <Sidebar_002 grid_row="2" grid_row_span="3" grid_column="6" grid_column_span="1"/> */}
 
     </div>
   )

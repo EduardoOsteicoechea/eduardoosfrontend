@@ -47,7 +47,7 @@ const Chatbot_001: React.FC<Chatbot_001Props> = ({
   function getCurrentHourMinute() {
     const now = new Date();
     const hours = now.getHours();
-    const minutes = now.getMinutes();
+    const minutes = now.getMinutes(); 
     const formattedTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
     return formattedTime;
   }

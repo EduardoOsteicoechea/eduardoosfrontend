@@ -121,7 +121,7 @@
 
 //     <form onSubmit={handleSubmit} className="Chatbot_001_input_form">
 //      <textarea
-//       className="Chatbot_001_input_form_text_area"
+//       className="Chatbot_001_input_form_text_area" 
 //       value={userPrompt}
 //       onChange={handleInputChange}
 //       placeholder="Ask about Eduardo..."

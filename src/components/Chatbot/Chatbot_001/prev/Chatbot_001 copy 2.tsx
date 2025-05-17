@@ -41,7 +41,7 @@
 //   }
 
 //   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-//     setUserPrompt(event.target.value);
+//     setUserPrompt(event.target.value); 
 //   };
 
 //   const handleSubmit = async (event: React.FormEvent) => {

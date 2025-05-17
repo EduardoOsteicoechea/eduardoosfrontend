@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--c10);
+  background: var(--c2);
   max-height: 25dvw;
   height: 7dvw;
   padding: 1dvw 0;
@@ -25,7 +25,6 @@
 }
 
 .footer_links_heading {
-  color: var(--c1) !important;
   font-family: f1b;
   font-size: .85dvw;
 }
@@ -50,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
+    text-decoration: none; 
     background: var(--c1) !important;
     color: var(--c10) !important;
     font-size: 3.15dvw;

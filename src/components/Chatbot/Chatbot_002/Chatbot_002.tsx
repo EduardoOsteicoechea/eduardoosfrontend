@@ -1,5 +1,5 @@
 import HasForbiddenCharacters from "../../../Helpers/ForbiddenCharacters";
-import "./Chatbot_001.css";
+import "./Chatbot_002.css";
 import React, { useEffect, useRef, useState } from 'react';
 
 interface DeepSeekChatMessage {
@@ -7,50 +7,25 @@ interface DeepSeekChatMessage {
   content: string;
 }
 
-const Chatbot_001: React.FC = () => {
+const Chatbot_002: React.FC = () => {
   const [messages, setMessages] = useState<DeepSeekChatMessage[]>([]);
   const [userPrompt, setUserPrompt] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
-  const [currentTime, setCurrentTime] = useState(() => { const now = new Date(); const hours = now.getHours(); const minutes = now.getMinutes(); return `${hours}:${minutes < 10 ? '0' + minutes : minutes}`; });
+  const [currentTime, setCurrentTime] = useState('');
   const chatEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
+  // useEffect(() => {
+  //   if (messages.length > 0 && chatEndRef.current) {
+  //     chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // }, [messages]);
+  
   useEffect(() => {
-    if (textareaRef.current) {
-      textareaRef.current.scrollTop = textareaRef.current.scrollHeight;
-    }
-  }, [userPrompt, messages]);
-
-  useEffect(() => {
-    if (chatContainerRef.current && chatEndRef.current) {
-      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages]);
-
-  const focusTextArea = () => {
     if (textareaRef.current) {
       textareaRef.current.focus();
     }
-  }
-
-  const handleChatbot_001_input_form_sample_prompt_buttonClick = () => {
-    setUserPrompt("Please resume Eduardo's professional profile");
-    focusTextArea();
-  }
-
-  const handleChatbot_001_input_form_reset_chat_buttonClick = () => {
-    setUserPrompt("");
-    focusTextArea();
-  }
-
-  const Chatbot_001_input_form_help_on_what_to_ask_buttonClick = () => {
-    window.open('https://eduardoos.com/responding_to_hard_discipline', '_blank');
-    focusTextArea();
-  }
-
-  useEffect(() => {
-    focusTextArea();
   }, [messages]);
 
   function getCurrentHourMinute() {
@@ -64,15 +39,16 @@ const Chatbot_001: React.FC = () => {
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const inputValue = event.target.value
     let result: [boolean, string] = HasForbiddenCharacters(inputValue)
-    if (result[0]) {
+    if(result[0]){
       alert(`"${result[1]}" is a forbidden character`)
-    } else {
+    }else{
       setUserPrompt(event.target.value);
     }
   };
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    
     if (userPrompt.trim()) {
       const newUserMessage: DeepSeekChatMessage = { role: 'user', content: userPrompt };
 
@@ -102,47 +78,46 @@ const Chatbot_001: React.FC = () => {
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
             }
-            console.log('Response OK, attempting to read text...');
-            return response.text();
+            return response.json() as Promise<DeepSeekChatMessage>;
           })
-          .then(data => {
-            console.log('Data received:', data);
-            const responseMessage: DeepSeekChatMessage = { role: 'assistant', content: data };
-            updatedMessages = [...updatedMessages, responseMessage];
-            setMessages((prevMessages) => [...prevMessages, responseMessage]);
+          .then(data => {            
+            console.log('data:', data);
+            setMessages((previousMessages:any)=>[...previousMessages, data])
+            updatedMessages = [...updatedMessages, data]
             console.log('updatedMessages:', updatedMessages);
             setIsStreaming(false);
           })
           .catch(error => {
-            console.error('Fetch error:', error);
-            const responseMessage: DeepSeekChatMessage = { role: 'assistant', content: 'An error occurred while processing your request.' };
-            updatedMessages = [...updatedMessages, responseMessage];
-            setMessages((prevMessages) => [...prevMessages, responseMessage]);
-            console.error('updatedMessages (error):', updatedMessages);
+            const errorMessage: DeepSeekChatMessage = { role: 'bot', content: 'An error occurred while processing your request.' };
+            console.error(error);
+            updatedMessages = [...updatedMessages, errorMessage]
+            console.error('updatedMessages:', updatedMessages);
             setIsStreaming(false);
           });
 
-        return updatedMessages;
+        return updatedMessages; // Return the updated state
       });
 
       setUserPrompt('');
     }
   };
 
+  const handleChatbot_001_input_form_sample_prompt_buttonClick = ()=>{
+    setUserPrompt("Please resume Eduardo's professional profile")
+
+  }
+
+  const handleChatbot_001_input_form_reset_chat_buttonClick = ()=>{
+    setUserPrompt("")
+
+  }
+
   return (
     <div className="Chatbot_001">
-      <div
-        className={`Chatbot_001_chat_display ${messages.length > 0 ? "Chatbot_001_chat_display_expanded" : "Chatbot_001_chat_display_contracted"}`}
-        ref={chatContainerRef}
+      <div 
+      className={`Chatbot_001_chat_display ${messages.length > 0 ? "Chatbot_001_chat_display_expanded" : "Chatbot_001_chat_display_contracted"}`}
+      ref={chatContainerRef}
       >
-        <div className={`Chatbot_001_chat_display_message Chatbot_001_chat_display_message_assistant`}>
-          <strong className="Chatbot_001_chat_display_message_subject">
-            {`Assistant (${currentTime})`}
-          </strong>
-          <p className="Chatbot_001_chat_display_message_content">
-            Ask Anything About Eduardo
-          </p>
-        </div>
         {messages.map((msg, index) => (
           <div key={index} className={`Chatbot_001_chat_display_message Chatbot_001_chat_display_message_${msg.role}`}>
             <strong className="Chatbot_001_chat_display_message_subject">
@@ -151,6 +126,7 @@ const Chatbot_001: React.FC = () => {
             <p className="Chatbot_001_chat_display_message_content">
               {msg.content}
             </p>
+
           </div>
         ))}
         <div ref={chatEndRef} />
@@ -161,28 +137,26 @@ const Chatbot_001: React.FC = () => {
           className={`Chatbot_001_input_form_text_area ${messages.length > 0 ? "Chatbot_001_input_form_text_area_expanded" : "Chatbot_001_input_form_text_area_contracted"}`}
           value={userPrompt}
           onChange={handleInputChange}
+          placeholder="Ask my AI agent about me..."
           spellCheck="false"
           ref={textareaRef}
         />
         <div className="Chatbot_001_input_form_send_buttons_container">
           <div className="Chatbot_001_input_form_send_help_buttons_container">
-            <div
-              className="Chatbot_001_input_form_sample_prompt_button"
-              onClick={handleChatbot_001_input_form_sample_prompt_buttonClick}
+            <div 
+            className="Chatbot_001_input_form_sample_prompt_button"
+            onClick={handleChatbot_001_input_form_sample_prompt_buttonClick}
             >
-              <img src="icons/bolt_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Quick Action Icon" />
+              a
             </div>
-            <div
-              className="Chatbot_001_input_form_help_on_what_to_ask_button"
-              onClick={Chatbot_001_input_form_help_on_what_to_ask_buttonClick}
-            >
-              <img src="icons/help_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Quick Action Icon" />
+            <div className="Chatbot_001_input_form_help_on_what_to_ask_button">
+              a
             </div>
-            <div
-              className="Chatbot_001_input_form_reset_chat_button"
-              onClick={handleChatbot_001_input_form_reset_chat_buttonClick}
+            <div 
+            className="Chatbot_001_input_form_reset_chat_button"
+            onClick={handleChatbot_001_input_form_reset_chat_buttonClick}
             >
-              <img src="icons/delete_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Quick Action Icon" />
+              a
             </div>
           </div>
           <button type="submit" className="Chatbot_001_input_form_send_button" disabled={isStreaming}>
@@ -194,4 +168,4 @@ const Chatbot_001: React.FC = () => {
   );
 };
 
-export default Chatbot_001;
+export default Chatbot_002;

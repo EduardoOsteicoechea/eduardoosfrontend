@@ -4,17 +4,15 @@ import Contact from './pages/Contact';
 import LogIn from './pages/LogIn';
 import SignIn from './pages/SingIn';
 import LogOut from './pages/LogOut';
-import Header001 from './components/Header/Header001';
-import Footer001 from './components/Footer/Footer001/Footer001';
 import ChurchMembership from './pages/ChurchMembership';
 import AHealthyLoneliness from './pages/AHealthyLoneliness';
 import Responding_to_hard_discipline from './pages/Responding_to_hard_discipline/Responding_to_hard_discipline';
+import BeforeTheRoleAndTheTragedy from './pages/BeforeTheRoleAndTheTragedy/BeforeTheRoleAndTheTragedy';
 
 function App()
 {
    return (
       <BrowserRouter>
-         <Header001 />
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -24,8 +22,8 @@ function App()
             <Route path="/a_healthy_lonelyness" element={<AHealthyLoneliness />} />
             <Route path="/church_membership" element={<ChurchMembership />} />
             <Route path="/responding_to_hard_discipline" element={<Responding_to_hard_discipline />} />
+            <Route path="/before_the_role_and_the_tragedy" element={<BeforeTheRoleAndTheTragedy />} />
          </Routes>
-         <Footer001 />
       </BrowserRouter>
    );
 }

@@ -131,7 +131,7 @@
    --border_radius1: 4px;
    --border_radius_2: 8px;
    --navigation_menu_width: 300px;
-   --headerHeight: 60px;
+   --headerHeight: 3.5dvw;
    --footerMinHeight: 60px;
    --homeChatHeight: 400px;
    --br1: 9px;
@@ -177,6 +177,20 @@ ul
    list-style: none;
    list-style-type: none;
 }
+.page{
+   height: 100dvh;
+   background: var(--c1);
+   .pageHeader{
+      height: 7%
+   }
+   .pageContent{
+      height: 83%;
+   }
+   .pageFooter{      
+      height: 10%;
+      background: var(--c1);
+   }
+}
 
 @media only screen and (max-width: 950px) and (min-width: 621px)
 {}
@@ -186,6 +200,21 @@ ul
 
 @media only screen and (max-width: 350px)
 {
+:root
+{
+   --itemHeight: 30px;
+   --item_Height_1: 30px;
+   --item_height_10: 380px;
+   --margin_global1: 10px;
+   --margin_global2: 10px;
+   --border_radius1: 4px;
+   --border_radius_2: 8px;
+   --navigation_menu_width: 300px;
+   --headerHeight: 16dvw;
+   --footerMinHeight: 60px;
+   --homeChatHeight: 400px;
+   --br1: 9px;
+}
 
    body
    {

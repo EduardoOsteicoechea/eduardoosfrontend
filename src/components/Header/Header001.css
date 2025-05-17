@@ -2,7 +2,7 @@
 {
    display: flex;
    align-items: center;
-   height: 3.5dvw;
+   height: var(--headerHeight);
    padding: .85dvw 1.75dvw .85dvw 1.2dvw;
    background:var(--c1);
    width: 100dvw;
@@ -18,7 +18,7 @@
 }
 .Header001LogoText
 {
-   font-size: 1.4dvw;
+   font-size: 1.2dvw;
    font-family: f1bl;
 }
 .Header001 > button
@@ -46,11 +46,11 @@
    position: absolute;
    display: flex;
    flex-direction: column;
-   gap: 10px;
+   gap: 2dvw;
    top:var(--headerHeight);
    min-height: calc(100dvh - (var(--headerHeight)));
    width: 0;
-   background: var(--c3);
+   background: var(--c2);
    z-index: 10000;
    border-radius: 0;
    overflow: hidden;
@@ -63,10 +63,10 @@
    width: 0;
 }
 .Navigation001Ul{
-   padding: 20px;
+   padding: 2dvw;
    display: flex;
    flex-direction: column;
-   gap: 10px;
+   gap: 2dvw;
 }
 
 @media only screen and (max-width: 620px)
@@ -75,7 +75,7 @@
    {
       display: flex;
       align-items: end;
-      height: 16dvw;
+      height: var(--headerHeight);
       padding: 4dvw 4dvw;
       background:var(--c1);
       width: 100dvw;

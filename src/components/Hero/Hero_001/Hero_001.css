@@ -1,7 +1,7 @@
 .Hero_001 {
   display: grid;
   grid-template-columns: 1dvw 25dvw 1dvw auto 1dvw 25dvw 2dvw;
-  grid-template-rows: 1dvw 2dvw .85dvw 29.5dvw 1dvw ;
+  grid-template-rows: auto 3dvw .85dvw 29.5dvw auto;
 }
 .Hero_001>* {
   display: flex;
@@ -11,6 +11,7 @@
 }
 
 .personal_photo_container {
+  display: none;
   background: white;
   grid-column: 2;
   grid-row: 2 / span 3;
@@ -30,7 +31,7 @@
   /* border: solid 2px var(--c10); */
   font-size: 2dvw;
   background: var(--c1);
-  padding: .75dvw;
+  padding: .0dvw;
 }
 .current_viewer_panel > * {
   font-size: 4dvw;
@@ -51,10 +52,10 @@
 
 .ui_options_dashboard_container {
   padding: .75dvw 0;
-  grid-column: 4 / 2;
+  grid-column: 4;
   grid-row: 2;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1dvw;
   width: 100%;
@@ -71,7 +72,13 @@
   overflow: hidden;
   border-radius: var(--border_radius1);
   cursor: pointer;
-  background: var(--c1);
+  background: var(--c3);
+}
+.ui_options_facet_button:active, .ui_options_facet_button:focus {
+  /* border: solid .2dvw var(--c10); */
+  background: rgb(0, 195, 255);
+  background: rgb(0, 255, 170);
+  background: rgb(255, 166, 0);
 }
 .ui_options_dashboard_action_button {
   display: flex;

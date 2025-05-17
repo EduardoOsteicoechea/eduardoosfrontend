@@ -13,7 +13,7 @@ interface DeepSeekChatMessage {
 const Chatbot_001: React.FC<Chatbot_001Props> = ({ }) => {
   const [messages, setMessages] = useState<DeepSeekChatMessage[]>([]);
   const [userPrompt, setUserPrompt] = useState('');
-  const [isStreaming, setIsStreaming] = useState(false);
+  const [isStreaming, setIsStreaming] = useState(false); 
   const [currentTime, setCurrentTime] = useState('');
   const chatEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
