@@ -200,6 +200,20 @@ ul
 
 @media only screen and (max-width: 350px)
 {
+.page{
+   height: 100dvh;
+   background: var(--c1);
+   .pageHeader{
+      height: 7%
+   }
+   .pageContent{
+      height: 83%;
+   }
+   .pageFooter{      
+      height: 10%;
+      background: var(--c10) !important;
+   }
+}
 :root
 {
    --itemHeight: 30px;

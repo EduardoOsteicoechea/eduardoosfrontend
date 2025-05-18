@@ -1,13 +1,16 @@
-import Assistant_001 from "../../components/Assistant/Assistant_001/Assistant_001";
+import Article_001 from "../../components/Article_001/Article_001";
+import Footer001 from "../../components/Footer/Footer001/Footer001";
+import Header001 from "../../components/Header/Header001";
 import "./BeforeTheRoleAndTheTragedy.css"
 
-function Home() {
+export default () => {
 
    return (
-      <>
-         <Assistant_001 url="'https://eduardoos.com/chatbot/about/before_the_role_and_the_tragedy'"/>
-      </>
+      <div className="page">
+         <Header001/>
+         <Article_001 url="https://eduardoos.com/static_data/between_the_role_and_the_tragedy/article_rich_data" />
+         {/* <Article_001 url="static_data/responding_to_hard_discipline.json" /> */}
+         <Footer001/>
+      </div>
    );
  }
- 
- export default Home;

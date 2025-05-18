@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--c2);
   max-height: 25dvw;
   height: 7dvw;
   padding: 1dvw 0;
@@ -14,8 +13,8 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: var(--c1) !important;
-  color: var(--c10) !important;
+  color: var(--c1) !important;
+    background: var(--c10) !important;
   font-size: .85dvw;
   padding: 0 .9dvw;
   border-radius: .2dvw;
@@ -34,36 +33,32 @@
 @media only screen and (max-width: 620px) {
   .Footer {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--c10);
-    max-height: 225dvw;
-    height: 600px !important;
-    padding: 5dvw;
+    max-height: 0dvw;
+    height: fit-content !important;
+    padding: 10dvw 2dvw;
     width: 100dvw;
     gap: 3dvw;
   }
 
-  .Footer>a {
+  .Footer> a {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none; 
-    background: var(--c1) !important;
-    color: var(--c10) !important;
-    font-size: 3.15dvw;
+    color: var(--c1) !important;
+    font-size: 4dvw;
     padding: 0 .9dvw;
     border-radius: .75dvw;
     font-family: f1bl;
     width: 40dvw;
-    height: 7dvw;
+    height: 10dvw;
   }
 
   .footer_links_heading {
     display: flex;
     flex-wrap: wrap;
-    color: var(--c1) !important;
     font-family: f1b;
     font-size: 4.5dvw;
     width: 22dvw;
