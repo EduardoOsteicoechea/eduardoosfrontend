@@ -5,12 +5,13 @@ import "./BeforeTheRoleAndTheTragedy.css"
 
 export default () => {
 
-   return (
-      <div className="page">
-         <Header001/>
-         <Article_001 url="https://eduardoos.com/static_data/between_the_role_and_the_tragedy/article_rich_data" />
-         {/* <Article_001 url="static_data/responding_to_hard_discipline.json" /> */}
-         <Footer001/>
-      </div>
-   );
- }
+  return (
+    <div className="page">
+      <Header001 />
+      <Article_001 
+      url="https://eduardoos.com/static_data/between_the_role_and_the_tragedy/article_rich_data" 
+      />
+      <Footer001 />
+    </div>
+  );
+}

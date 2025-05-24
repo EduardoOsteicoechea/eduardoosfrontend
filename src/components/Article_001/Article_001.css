@@ -43,10 +43,10 @@
    gap: .75rem;
 }
 
-.reference_to_article_headings_list_heading {
+.Article_001_section_heading {
    font-family: f1b;
    line-height: 1.35rem;
-   margin-bottom: 3dvw;
+   margin-bottom: 2rem;
 }
 
 .reference_to_article_heading_list {
@@ -125,14 +125,41 @@
    display: flex;
    flex-wrap: wrap;
    gap: .5rem;
-   margin-top: .35rem;
+   margin-top: .5rem;
    padding: 0 0 0 2.75rem;
 }
 
 .biblically_justified_idea_biblical_reference_text {
+   background: var(--c3);
+   padding: 0 .5rem;
+   font-size: .85rem;
+}
+
+.biblically_justified_idea_extended_explanation_container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: .5rem;
+   margin-top: .75rem;
+   padding: 0 0 0 2.75rem;
+}
+
+.biblically_justified_idea_extended_explanation_text {
    background: var(--c1);
    padding: 0 .5rem;
    font-size: .85rem;
+   font-family: f1r;
+}
+
+.extended_explanation_biblical_passage {
+   color: var(--ac1) !important;
+}
+
+.visible{
+  display: flex !important;
+}
+
+.hidden{
+  display: none !important;
 }
 
 
@@ -155,7 +182,7 @@
       gap: .75rem;
    }
 
-   .reference_to_article_headings_list_heading {
+   .Article_001_section_heading {
       font-family: f1b;
       line-height: 1.35rem;
       margin-bottom: 3dvw;
