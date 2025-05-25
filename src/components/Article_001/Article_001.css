@@ -147,7 +147,7 @@
 
 .biblically_justified_idea_extended_explanation_text {
   padding: 0 .5rem;
-  font-size: .85rem;
+  font-size: .1rem;
   font-family: f1r;
 }
 
@@ -261,7 +261,7 @@
 
   .biblically_justified_idea_biblical_reference_text {
     padding: 0 .5rem;
-    font-size: .85rem;
+    font-size: 1rem;
   }
 
   .biblically_justified_idea_extended_explanation_container {
