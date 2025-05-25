@@ -177,6 +177,30 @@
 .hidden {
   display: none !important;
 }
+.hide_biblically_justified_idea_extended_explanation_button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  background: var(--c3);
+  border-radius: 100px;
+  margin-left: 38%;
+}
+.hide_biblically_justified_idea_extended_explanation_button_bar{  
+  bottom: 2%;
+  height: 30%;
+  width: 9%;
+  background: var(--c10);
+}
+.hide_biblically_justified_idea_extended_explanation_button_bar1{  
+  transform: rotate(135deg);
+  left: 12%;
+}
+.hide_biblically_justified_idea_extended_explanation_button_bar2{
+  transform: rotate(45deg);
+  left: -12%;
+}
 
 
 @media only screen and (max-width: 620px) {
