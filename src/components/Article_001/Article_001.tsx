@@ -82,7 +82,7 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
           </section>
 
           <section className="reference_to_article_headings_section">
-            <h2 className="Article_001_section_heading">Idea List</h2>
+            <h2 className="Article_001_section_heading">Ideas</h2>
             <ul className="reference_to_article_heading_list">
               {ideas?.map((i, index) => <li key={index}><span>{index + 1}. </span><a className="reference_to_article_heading" href={"#" + i}>{i}</a></li>)}
             </ul>
@@ -90,20 +90,25 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
 
           <section className="article_ideas_ection">
             <h2 className="Article_001_section_heading">Article</h2>
-            {jsonData.ideas.map((i, index) =>
-              <div key={index} className="ArticleIdea">
+            {
+            jsonData.ideas.map((i, ideaIndex) =>
+              <div key={ideaIndex} className="ArticleIdea">
                 <h2
-                  key={index}
+                  key={ideaIndex}
                   id={i.heading}
                   className="ArticleIdeaHeading"
-                >{index + 1}. {i.heading}</h2>
-                {i.subideas.map((si, index) => {
+                >
+                  {ideaIndex + 1}. {i.heading}
+                </h2>
+
+                {
+                i.subideas.map((si, subIdeaIndex) => {
 
                   const rbr = si.relatedBibleReferences && si.relatedBibleReferences.length > 0 ? si.relatedBibleReferences.reduce((acc, c) => acc.concat(", " + c)) : "";
 
                   if (si.isBiblicalPassage && si.isBiblicalPassage) {
                     return <p
-                      key={index}
+                      key={subIdeaIndex}
                       className="biblicalPassage"
                     >
                       "{si.text}"". {rbr}
@@ -118,22 +123,23 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
                   if (si.isBiblicallyJustifiedIdeaList) {
                     const ideas: BiblicallyJustifiedIdeaList[] = si.biblicallyJustifiedIdeaList
                     return <div
-                      key={index}
+                      key={subIdeaIndex}
                       className="biblicalPassage"
                     >
                       <ul className="biblically_justified_idea_list" >
-                        {ideas.map((element, i) => (
+                        {
+                          ideas.map((element, bjilii) => (
                           <li
-                            key={i}
-                            id={`biblically_justified_idea_list_item_${i}`}
+                            key={bjilii}
+                            id={`biblically_justified_idea_list_item_${subIdeaIndex}_${bjilii}`}
                             className="biblically_justified_idea_list_item"
                           >
                             <input
-                              id={`biblically_justified_idea_checkbox_${i}`}
+                              id={`biblically_justified_idea_checkbox_${subIdeaIndex}_${bjilii}`}
                               className="biblically_justified_idea_checkbox"
                               type="checkbox"
                               onClick={() => {
-                                const extendedExplanationContainer = document.getElementById(`biblically_justified_idea_extended_explanation_container_${i}`)
+                                const extendedExplanationContainer = document.getElementById(`biblically_justified_idea_extended_explanation_container_${subIdeaIndex}_${bjilii}`)
                                 if (extendedExplanationContainer?.classList.contains("visible")) {
                                   extendedExplanationContainer?.classList.remove("visible")
                                   extendedExplanationContainer?.classList.add("hidden")
@@ -144,84 +150,102 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
                                 }
                               }}
                             />
-                            {index + 1}. <span className="biblically_justified_idea_text">{element.text}</span>
+                            
+                            {subIdeaIndex + 1}. <span className="biblically_justified_idea_text">
+                              {element.text}
+                            </span>
+                            
                             <div className="biblically_justified_idea_biblical_references_container">
-                              {element.biblicalReferences.map((br, bri) => (
-                                <span key={bri} className="biblically_justified_idea_biblical_reference_text">{br}</span>
-                              ))}
+                              {
+                                element.biblicalReferences.map((br, bri) => (
+                                  <span key={bri} className="biblically_justified_idea_biblical_reference_text">{br}</span>
+                                ))
+                              }
                             </div>
-                            <div
-                              id={`biblically_justified_idea_extended_explanation_container_${i}`} className="biblically_justified_idea_extended_explanation_container visible"
-                            >
-                              {element.extendedExplanation?.map(
-                                (eetxt, eetxti) => (
-                                  <div
-                                    key={eetxti}
-                                    className="biblically_justified_idea_extended_explanation_text_items_container"
-                                  >
-                                    <span
-                                      key={eetxti}
-                                      className={`biblically_justified_idea_extended_explanation_text ${eetxt[1]}`}
-                                    >
-                                      {eetxt[0]}
-                                    </span>
-                                    {
-                                      eetxt[2] ?
-                                        <span
-                                          className={`biblically_justified_idea_extended_explanation_text_biblical_reference`}
-                                        >
-                                          ({eetxt[2]}).
-                                        </span>
-                                        : ""
-                                    }
-                                  </div>
-                                )
-                              )}
-                              <div
-                                className="hide_biblically_justified_idea_extended_explanation_button"
-                                onClick={() => {
-                                  const ideaContainer = document.getElementById(`biblically_justified_idea_list_item_${i}`)
-                                  const extendedExplanationContainer = document.getElementById(`biblically_justified_idea_extended_explanation_container_${i}`)
-                                  const checkboxElement = document.getElementById(`biblically_justified_idea_checkbox_${i}`)
 
-                                  if (extendedExplanationContainer?.classList.contains("visible")) {
-                                    extendedExplanationContainer?.classList.remove("visible")
-                                    extendedExplanationContainer?.classList.add("hidden")
-                                    if (checkboxElement instanceof HTMLInputElement) {
-                                      const checkbox: HTMLInputElement = checkboxElement;
-                                      checkbox.checked = true;
+                            <div
+                              id={`biblically_justified_idea_extended_explanation_container_${subIdeaIndex}_${bjilii}`} className="biblically_justified_idea_extended_explanation_container visible"
+                            >
+                              {
+                                element.extendedExplanation?.map(
+                                  (eetxt, eetxti) => (
+                                    <div
+                                      key={eetxti}
+                                      id="biblically_justified_idea_extended_explanation_text_items_container"
+                                      className="biblically_justified_idea_extended_explanation_text_items_container"
+                                    >
+                                      <span
+                                        key={eetxti}
+                                        className={`biblically_justified_idea_extended_explanation_text ${eetxt[1]}`}
+                                      >
+                                        {eetxt[0]}
+                                      </span>
+                                      {
+                                        eetxt[2] ?
+                                          <span
+                                            className={`biblically_justified_idea_extended_explanation_text_biblical_reference`}
+                                          >
+                                            ({eetxt[2]}).
+                                          </span>
+                                          : ""
+                                      }
+                                    </div>
+                                  )
+                                )
+                              }
+
+                              {
+                                element.extendedExplanation?.length > 0 ?
+                                <div
+                                  className="hide_biblically_justified_idea_extended_explanation_button"
+                                  onClick={() => {
+                                    const ideaContainer = document.getElementById(`biblically_justified_idea_list_item_${subIdeaIndex}_${bjilii}`)
+                                    const extendedExplanationContainer = document.getElementById(`biblically_justified_idea_extended_explanation_container_${subIdeaIndex}_${bjilii}`)
+                                    const checkboxElement = document.getElementById(`biblically_justified_idea_checkbox_${subIdeaIndex}_${bjilii}`)
+
+                                    if (extendedExplanationContainer?.classList.contains("visible")) {
+                                      extendedExplanationContainer?.classList.remove("visible")
+                                      extendedExplanationContainer?.classList.add("hidden")
+                                      if (checkboxElement instanceof HTMLInputElement) {
+                                        const checkbox: HTMLInputElement = checkboxElement;
+                                        checkbox.checked = true;
+                                      }
                                     }
-                                  }
-                                  else {
-                                    extendedExplanationContainer?.classList.remove("hidden")
-                                    extendedExplanationContainer?.classList.add("visible")
-                                    if (checkboxElement instanceof HTMLInputElement) {
-                                      const checkbox: HTMLInputElement = checkboxElement;
-                                      checkbox.checked = false;
+                                    else {
+                                      extendedExplanationContainer?.classList.remove("hidden")
+                                      extendedExplanationContainer?.classList.add("visible")
+                                      if (checkboxElement instanceof HTMLInputElement) {
+                                        const checkbox: HTMLInputElement = checkboxElement;
+                                        checkbox.checked = false;
+                                      }
                                     }
-                                  }
-                                  const rect = ideaContainer?.getBoundingClientRect();
-                                  if(ideaContainer)
-                                    {
-                                      const desiredScrollPosition = window.scrollY + rect!.top - 50;
-                                      window.scrollTo({
-                                        top: desiredScrollPosition,
-                                        behavior: 'smooth'
-                                      });
-                                    }
-                                }}
-                              >
-                                <div className="hide_biblically_justified_idea_extended_explanation_button_bar hide_biblically_justified_idea_extended_explanation_button_bar1"></div>
-                                <div className="hide_biblically_justified_idea_extended_explanation_button_bar hide_biblically_justified_idea_extended_explanation_button_bar2"></div>
-                              </div>
+                                    const rect = ideaContainer?.getBoundingClientRect();
+                                    if(ideaContainer)
+                                      {
+                                        const desiredScrollPosition = window.scrollY + rect!.top - 50;
+                                        window.scrollTo({
+                                          top: desiredScrollPosition,
+                                          behavior: 'smooth'
+                                        });
+                                      }
+                                  }}
+                                >
+                                  <div className="hide_biblically_justified_idea_extended_explanation_button_bar hide_biblically_justified_idea_extended_explanation_button_bar1"></div>
+                                  <div className="hide_biblically_justified_idea_extended_explanation_button_bar hide_biblically_justified_idea_extended_explanation_button_bar2"></div>
+                                </div>
+                                :
+                                ""
+                              }
+
                             </div>
                           </li>
-                        ))}
+                        ))
+                        }
                       </ul>
                     </div>;
                   }
 
-                  return <p key={index}>
+                  return <p key={ideaIndex}>
                     {si.text}
                     <span className="biblicalPassageReference">
                       {rbr}
