@@ -150,9 +150,25 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
                             >
                               {element.extendedExplanation?.map(
                                 (eetxt, eetxti) => (
-                                  <span key={eetxti} className={`biblically_justified_idea_extended_explanation_text ${eetxt[1]}`}>
-                                    {eetxt[0]}
-                                  </span>
+                                  <div
+                                  className="biblically_justified_idea_extended_explanation_text_items_container"
+                                  >
+                                    <span 
+                                    key={eetxti} 
+                                    className={`biblically_justified_idea_extended_explanation_text ${eetxt[1]}`}
+                                    >
+                                      {eetxt[0]}
+                                    </span>
+                                    {
+                                      eetxt[2] ?
+                                      <span
+                                      className={`biblically_justified_idea_extended_explanation_text_biblical_reference`}
+                                      >
+                                        ({eetxt[2]}).
+                                      </span>
+                                      : ""
+                                    }
+                                  </div>
                                 )
                               )}
                             </div>

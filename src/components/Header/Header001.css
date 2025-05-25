@@ -18,7 +18,7 @@
 }
 .Header001LogoText
 {
-   font-size: 1.2dvw;
+      font-size: 16px;
    font-family: f1bl;
 }
 .Header001 > button
@@ -30,6 +30,7 @@
    height: 1.8dvw;
    border-radius: .2dvw;
    margin-left: .5dvw;
+      font-size: 14px;
 }
 .lets_talk_button
 {
@@ -73,10 +74,11 @@
 {
    .Header001
    {
+      flex-wrap: wrap;
       display: flex;
       align-items: end;
       height: var(--headerHeight);
-      padding: 4dvw 4dvw;
+      padding: 0dvw 4dvw;
       background:var(--c1);
       width: 100dvw;
    }
@@ -87,11 +89,12 @@
       width: fit-content;
       display: flex;
       margin-right: auto;
+      font-size: 16px;
    }
    .Header001LogoText
    {
-      top: -.05dvw;
-      font-size: 5.20dvw;
+      top: 1dvw;
+      font-size: 20px;
       font-family: f1bl;
    }
    .Header001 > button
