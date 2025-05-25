@@ -153,6 +153,7 @@
 
 .extended_explanation_biblical_passage {
   color: var(--ac1) !important;
+  font-family: f1sb !important;
 }
 
 .extended_explanation_biblical_passage::before {
