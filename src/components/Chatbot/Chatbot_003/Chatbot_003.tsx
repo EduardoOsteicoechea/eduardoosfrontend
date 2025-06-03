@@ -24,6 +24,7 @@ const Chatbot_003: React.FC = () => {
 
   useEffect(() => {
     if (chatContainerRef.current && chatEndRef.current) {
+      chatEndRef.current.scrollBy(0,100000);
     //   chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages]);
