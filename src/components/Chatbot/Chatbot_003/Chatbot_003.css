@@ -116,38 +116,37 @@
             height: 40%;
             margin-bottom: 10px;
 
-            .Chatbot_003_input_form_sample_prompt_button {
+            .Chatbot_003_input_form_button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                text-align: center;
-                border-radius: .2dvw;
-                cursor: pointer;
-                border: var(--b1);
+                width: 30px;
+                height: 30px;
+                border-radius: 4px;
+                font-size: 14px;
+                overflow: hidden;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                mask-size: contain;
+                -webkit-mask-position: center;
+                mask-position: center;
+                background: var(--cmf);
+            }
+
+            .Chatbot_003_input_form_sample_prompt_button {
+                -webkit-mask-image: url('/brand/icon_quick.svg');
+                mask-image: url('/brand/icon_quick.svg');
             }
 
             .Chatbot_003_input_form_help_on_what_to_ask_button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                background: var(--c3);
-                font-size: 1rem;
-                border-radius: .2dvw;
-                cursor: pointer;
-                border: var(--b1);
+                -webkit-mask-image: url('/brand/icon_help.svg');
+                mask-image: url('/brand/icon_help.svg');
             }
 
             .Chatbot_003_input_form_reset_chat_button {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                background: var(--c3);
-                font-size: 1rem;
-                border-radius: .2dvw;
-                cursor: pointer;
-                border: var(--b1);
+                -webkit-mask-image: url('/brand/icon_delete.svg');
+                mask-image: url('/brand/icon_delete.svg');
             }
         }
 
@@ -170,7 +169,7 @@
 
 
 @media only screen and (max-width: 620px) {
-    
+
     .Chatbot_003 {
         display: flex;
         flex-direction: column;
@@ -179,7 +178,8 @@
         max-width: 600px;
         width: 93% !important;
         margin: auto;
-        border: var(--b1);
+        /* border: var(--b1); */
+        border: none;
         padding: 10px;
     }
 
@@ -290,40 +290,38 @@
                 height: 40%;
                 margin-bottom: 10px;
 
-                .Chatbot_003_input_form_sample_prompt_button {
+                .Chatbot_003_input_form_button {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    text-align: center;
-                    cursor: pointer;
-                    border: var(--b1);
-                    border-radius: 4px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: .2dvw;
+                    margin-left: .5dvw;
+                    font-size: 14px;
+                    overflow: hidden;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    -webkit-mask-size: contain;
+                    mask-size: contain;
+                    -webkit-mask-position: center;
+                    mask-position: center;
+                    background: var(--cmf);
+                }
+
+                .Chatbot_003_input_form_sample_prompt_button {
+                    -webkit-mask-image: url('/brand/icon_quick.svg');
+                    mask-image: url('/brand/icon_quick.svg');
                 }
 
                 .Chatbot_003_input_form_help_on_what_to_ask_button {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                    background: var(--c3);
-                    font-size: 1rem;
-                    border-radius: .2dvw;
-                    cursor: pointer;
-                    border: var(--b1);
-                    border-radius: 4px;
+                    -webkit-mask-image: url('/brand/icon_help.svg');
+                    mask-image: url('/brand/icon_help.svg');
                 }
 
                 .Chatbot_003_input_form_reset_chat_button {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                    background: var(--c3);
-                    font-size: 1rem;
-                    border-radius: .2dvw;
-                    cursor: pointer;
-                    border: var(--b1);
-                    border-radius: 4px;
+                    -webkit-mask-image: url('/brand/icon_delete.svg');
+                    mask-image: url('/brand/icon_delete.svg');
                 }
             }
 
@@ -336,7 +334,7 @@
                 font-family: f1bl;
                 background: var(--c10);
                 color: var(--c1) !important;
-                    border-radius: 4px;
+                border-radius: 4px;
                 border: var(--b1);
             }
         }

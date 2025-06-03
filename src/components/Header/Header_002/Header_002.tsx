@@ -80,22 +80,22 @@ function Header_002() {
                Let's Talk
             </button>
             <button
-               className=""
+               className="Header_002_button Header_002_font_decrement_button"
                onClick={handleHeader001SmallerButtonClick}
             >
-                <img src="/brand/icon_font_size_decrement.svg" height="100%"/>
+                {/* <img src="/brand/icon_font_size_decrement.svg" height="100%"/> */}
             </button>
             <button
-               className=""
+               className="Header_002_button Header_002_font_increment_button"
                onClick={handleHeader001BiggerButtonClick}
             >
-                <img src="/brand/icon_font_size_increment.svg" height="100%"/>
+                {/* <img src="/brand/icon_font_size_increment.svg" height="100%"/> */}
             </button>
             <button
-               className=""
+               className="Header_002_button Header_002_menu_button"
                onClick={handleHeader001MenuButtonClick}
             >
-                <img src="/brand/icon_menu.svg" height="100%"/>
+                {/* <img src="/brand/icon_menu.svg" height="100%"/> */}
             </button>
          </div>
          

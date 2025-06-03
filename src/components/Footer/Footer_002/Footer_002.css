@@ -30,7 +30,8 @@
 
 @media only screen and (max-width: 620px) {
 .Footer_002 {
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     justify-content: space-between;
     height: var(--footerHeight);

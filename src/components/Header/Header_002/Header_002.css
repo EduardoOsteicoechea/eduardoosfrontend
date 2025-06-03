@@ -21,25 +21,44 @@
     font-family: f1bl;
 }
 
-.Header_002 > button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.8dvw;
-    height: 1.8dvw;
-    border-radius: .2dvw;
-    margin-left: .5dvw;
-    font-size: 14px;
-    overflow: hidden;
-    /* background: var(--cm); */
-    /* border: var(--b1); */
-}
 
 .lets_talk_button {
     width: fit-content !important;
     font-size: .9dvw;
     padding: 0 .8dvw;
     font-family: f1bl;
+}
+
+.Header_002_button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+    overflow: hidden;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background: var(--cmf);
+}
+.Header_002_font_decrement_button {
+    -webkit-mask-image: url('/brand/icon_font_size_decrement.svg');
+    mask-image: url('/brand/icon_font_size_decrement.svg');
+}
+.Header_002_font_increment_button {
+    -webkit-mask-image: url('/brand/icon_font_size_increment.svg');
+    mask-image: url('/brand/icon_font_size_increment.svg');
+}
+.Header_002_menu_button {
+    -webkit-mask-image: url('/brand/icon_menu.svg');
+    mask-image: url('/brand/icon_menu.svg');
 }
 
 
@@ -75,81 +94,81 @@
 
 @media only screen and (max-width: 620px) {
 
-.Header_002 {
-    display: flex;
-    align-items: center;
-    height: var(--headerHeight);
-    padding: 0px 15px;
-    width: 100%;
-    /* background: red; */
-    border-radius: none !important;
-}
+    .Header_002 {
+        display: flex;
+        align-items: center;
+        height: var(--headerHeight);
+        padding: 0px 15px;
+        width: 100%;
+        /* background: red; */
+        border-radius: none !important;
+    }
 
-.Header001LogoAnchor {
-    text-decoration: none;
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-}
+    .Header001LogoAnchor {
+        text-decoration: none;
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+    }
 
-.Header001LogoText {
-    margin-top: 22px;
-    height: 100%;
-    font-size: 20px;
-    font-family: f1bl;
-}
+    .Header001LogoText {
+        margin-top: 22px;
+        height: 100%;
+        font-size: 20px;
+        font-family: f1bl;
+    }
 
-.Header_002 > button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: .2dvw;
-    margin-left: .5dvw;
-    font-size: 14px;
-    overflow: hidden;
-    /* background: var(--cm); */
-    /* border: var(--b1); */
-}
+    .Header_002>button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: .2dvw;
+        margin-left: .5dvw;
+        font-size: 14px;
+        overflow: hidden;
+        /* background: var(--cm); */
+        /* border: var(--b1); */
+    }
 
-.lets_talk_button {
-    width: fit-content !important;
-    font-size: 16px;
-    padding: 0 .8dvw;
-    font-family: f1bl;
-}
+    .lets_talk_button {
+        width: fit-content !important;
+        font-size: 16px;
+        padding: 0 .8dvw;
+        font-family: f1bl;
+    }
 
 
-.Navigation001 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 2dvw;
-    top: var(--headerHeight);
-    min-height: calc(100dvh - (var(--headerHeight)));
-    width: 0;
-    background: var(--c2);
-    z-index: 10000;
-    border-radius: 0;
-    overflow: hidden;
-    transition: width 1000ms ease;
-}
+    .Navigation001 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 2dvw;
+        top: var(--headerHeight);
+        min-height: calc(100dvh - (var(--headerHeight)));
+        width: 0;
+        background: var(--c2);
+        z-index: 10000;
+        border-radius: 0;
+        overflow: hidden;
+        transition: width 1000ms ease;
+    }
 
-.Navigation001Visible {
-    width: 100%;
-}
+    .Navigation001Visible {
+        width: 100%;
+    }
 
-.Navigation001Hidden {
-    width: 0;
-}
+    .Navigation001Hidden {
+        width: 0;
+    }
 
-.Navigation001Ul {
-    padding: 2dvw;
-    display: flex;
-    flex-direction: column;
-    gap: 2dvw;
-}
+    .Navigation001Ul {
+        padding: 2dvw;
+        display: flex;
+        flex-direction: column;
+        gap: 2dvw;
+    }
 }

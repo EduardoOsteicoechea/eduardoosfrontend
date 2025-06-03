@@ -91,20 +91,19 @@
 :root {
     font-size: 15px;
     font-family: f1r, system-ui;
+    
+        --cmb: #fff;
+        --cmf: #000;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
-    --b1: solid 1px #ccc;
+    --b1: solid 1px var(--cmf);
     --b2: solid .1rem rgb(0, 0, 0);
     --tr1: all ease 1000ms;
     --tr2: all ease 200ms;
-
-    --cm: #000;
-    /* --cm: #909090; */
-    --c2: #f0f0f0;
 
     --itemHeight: 30px;
     --item_Height_1: 30px;
@@ -130,14 +129,19 @@
     font-family: var(--f1l);
     columns: #000;
     border-radius: 5px;
-    background: none;
-    color: var(--cm);
+    background: var(--cmb);
+    color: var(--cmf);
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --cmb: #000;
+        --cmf: #fff;
+    }
+
     * {
-        background: #000;
-        --cm: #fff;
+        background: var(--cmb);
+        color: var(--cmf);
     }
 }
 
