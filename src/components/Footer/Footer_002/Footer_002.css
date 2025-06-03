@@ -32,10 +32,11 @@
 .Footer_002 {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     height: var(--footerHeight);
-    padding: 2rem 0 !important;
+    padding: 0 16px !important;
     gap: 16px;
+    /* background: red; */
 }
 
 .Footer_002 > a {
@@ -46,7 +47,7 @@
     font-size: 14px;
     border-radius: .2dvw;
     font-family: f1b;
-    width: 27% !important;
+    width: 30% !important;
     height: 35px;
     border: var(--b1);
 }
