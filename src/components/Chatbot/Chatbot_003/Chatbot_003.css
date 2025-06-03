@@ -202,7 +202,7 @@
         padding: 0;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
-        margin-top: 80px;
+        /* margin-top: 80px; */
     }
 
     .Chatbot_003_chat_display_message {
@@ -261,11 +261,11 @@
         justify-content: space-between;
         margin-top: 0 !important;
         margin-bottom: 7px;
-        position: absolute;
+        /* position: absolute;
         width: 100%;
         top: 0;
         left: 0;
-        z-index: 100;
+        z-index: 100; */
 
         .Chatbot_003_input_form_text_area {
             resize: none;

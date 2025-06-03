@@ -24,8 +24,7 @@ const Chatbot_003: React.FC = () => {
 
   useEffect(() => {
     if (chatContainerRef.current && chatEndRef.current) {
-      chatEndRef.current.scrollBy(0,100000);
-    //   chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages]);
 
@@ -133,6 +132,33 @@ const Chatbot_003: React.FC = () => {
   return (
     <div className="Chatbot_003">
 
+
+      <div
+        className={`Chatbot_003_chat_display ${messages.length > 0 ? "Chatbot_003_chat_display_expanded" : "Chatbot_003_chat_display_contracted"}`}
+        ref={chatContainerRef}
+      >
+        <div className={`Chatbot_003_chat_display_message Chatbot_003_chat_display_message_assistant`}>
+          <strong className="Chatbot_003_chat_display_message_subject">
+            {`Assistant (${currentTime})`}
+          </strong>
+          <p className="Chatbot_003_chat_display_message_content">
+            Ask Anything About Eduardo
+          </p>
+        </div>
+        {messages.map((msg, index) => (
+          <div key={index} className={`Chatbot_003_chat_display_message Chatbot_003_chat_display_message_${msg.role}`}>
+            <strong className="Chatbot_003_chat_display_message_subject">
+              {msg.role === 'user' ? `You (${currentTime})` : `Assistant`}
+            </strong>
+            <p className="Chatbot_003_chat_display_message_content">
+              {msg.content}
+            </p>
+          </div>
+        ))}
+        <div ref={chatEndRef} />
+      </div>
+      
+
       <form onSubmit={handleSubmit} className="Chatbot_003_input_form">
         <textarea
           className={`Chatbot_003_input_form_text_area ${messages.length > 0 ? "Chatbot_003_input_form_text_area_expanded" : "Chatbot_003_input_form_text_area_contracted"}`}
@@ -161,30 +187,8 @@ const Chatbot_003: React.FC = () => {
           </button>
         </div>
       </form>
-      <div
-        className={`Chatbot_003_chat_display ${messages.length > 0 ? "Chatbot_003_chat_display_expanded" : "Chatbot_003_chat_display_contracted"}`}
-        ref={chatContainerRef}
-      >
-        <div className={`Chatbot_003_chat_display_message Chatbot_003_chat_display_message_assistant`}>
-          <strong className="Chatbot_003_chat_display_message_subject">
-            {`Assistant (${currentTime})`}
-          </strong>
-          <p className="Chatbot_003_chat_display_message_content">
-            Ask Anything About Eduardo
-          </p>
-        </div>
-        {messages.map((msg, index) => (
-          <div key={index} className={`Chatbot_003_chat_display_message Chatbot_003_chat_display_message_${msg.role}`}>
-            <strong className="Chatbot_003_chat_display_message_subject">
-              {msg.role === 'user' ? `You (${currentTime})` : `Assistant`}
-            </strong>
-            <p className="Chatbot_003_chat_display_message_content">
-              {msg.content}
-            </p>
-          </div>
-        ))}
-        <div ref={chatEndRef} />
-      </div>
+
+
     </div>
   );
 };
