@@ -215,7 +215,7 @@
     .Chatbot_003_chat_display_message_user {
         height: fit-content;
         font-size: 1rem;
-        margin-right: 20%;
+        margin-right: 10%;
         padding: 10px;
         width: fit-content !important;
         min-width: 30%;
@@ -223,7 +223,7 @@
     }
 
     .Chatbot_003_chat_display_message_assistant {
-        margin-left: 30%;
+        margin-left: 10%;
         background: var(--cm) !important;
         background: none;
         background: rgb(27, 199, 32) !important;
