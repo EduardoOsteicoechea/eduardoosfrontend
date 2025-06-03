@@ -94,7 +94,7 @@
     
         --cmb: #fff;
         --cmf: #000;
-        --cma1: rgb(248, 87, 47);
+        --cma1: rgb(255, 165, 29);
         --cma2: rgb(27, 199, 32);
         --cma3: rgb(227, 227, 227);
 
@@ -196,6 +196,7 @@ ul {
         overflow-y: auto !important;
         margin: auto;
         border: none !important;
+        height: 100svh;
     }
 }
 
