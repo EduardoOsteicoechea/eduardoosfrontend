@@ -94,6 +94,8 @@
     
         --cmb: #fff;
         --cmf: #000;
+        --cma1: rgb(248, 87, 47);
+        --cma2: rgb(27, 199, 32);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
