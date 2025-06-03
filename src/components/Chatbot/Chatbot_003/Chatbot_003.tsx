@@ -1,5 +1,5 @@
 import HasForbiddenCharacters from "../../../Helpers/ForbiddenCharacters";
-import "./Chatbot_001.css";
+import "./Chatbot_003.css";
 import React, { useEffect, useRef, useState } from 'react';
 
 interface DeepSeekChatMessage {
@@ -7,7 +7,7 @@ interface DeepSeekChatMessage {
   content: string;
 }
 
-const Chatbot_001: React.FC = () => {
+const Chatbot_003: React.FC = () => {
   const [messages, setMessages] = useState<DeepSeekChatMessage[]>([]);
   const [userPrompt, setUserPrompt] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
@@ -34,18 +34,18 @@ const Chatbot_001: React.FC = () => {
     }
   }
 
-  const handleChatbot_001_input_form_sample_prompt_buttonClick = () => {
+  const handleChatbot_003_input_form_sample_prompt_buttonClick = () => {
     setUserPrompt("Please resume Eduardo's professional profile");
     focusTextArea();
   }
 
-  const handleChatbot_001_input_form_reset_chat_buttonClick = () => {
+  const handleChatbot_003_input_form_reset_chat_buttonClick = () => {
     setUserPrompt("");
     focusTextArea();
   }
 
-  const Chatbot_001_input_form_help_on_what_to_ask_buttonClick = () => {
-    window.open('https://eduardoos.com/responding_to_hard_discipline', '_blank');
+  const Chatbot_003_input_form_help_on_what_to_ask_buttonClick = () => {
+    window.open('https://eduardoos.com', '_blank');
     focusTextArea();
   }
 
@@ -130,25 +130,25 @@ const Chatbot_001: React.FC = () => {
   };
 
   return (
-    <div className="Chatbot_001">
+    <div className="Chatbot_003">
       <div
-        className={`Chatbot_001_chat_display ${messages.length > 0 ? "Chatbot_001_chat_display_expanded" : "Chatbot_001_chat_display_contracted"}`}
+        className={`Chatbot_003_chat_display ${messages.length > 0 ? "Chatbot_003_chat_display_expanded" : "Chatbot_003_chat_display_contracted"}`}
         ref={chatContainerRef}
       >
-        <div className={`Chatbot_001_chat_display_message Chatbot_001_chat_display_message_assistant`}>
-          <strong className="Chatbot_001_chat_display_message_subject">
+        <div className={`Chatbot_003_chat_display_message Chatbot_003_chat_display_message_assistant`}>
+          <strong className="Chatbot_003_chat_display_message_subject">
             {`Assistant (${currentTime})`}
           </strong>
-          <p className="Chatbot_001_chat_display_message_content">
+          <p className="Chatbot_003_chat_display_message_content">
             Ask Anything About Eduardo
           </p>
         </div>
         {messages.map((msg, index) => (
-          <div key={index} className={`Chatbot_001_chat_display_message Chatbot_001_chat_display_message_${msg.role}`}>
-            <strong className="Chatbot_001_chat_display_message_subject">
+          <div key={index} className={`Chatbot_003_chat_display_message Chatbot_003_chat_display_message_${msg.role}`}>
+            <strong className="Chatbot_003_chat_display_message_subject">
               {msg.role === 'user' ? `You (${currentTime})` : `Assistant`}
             </strong>
-            <p className="Chatbot_001_chat_display_message_content">
+            <p className="Chatbot_003_chat_display_message_content">
               {msg.content}
             </p>
           </div>
@@ -156,36 +156,36 @@ const Chatbot_001: React.FC = () => {
         <div ref={chatEndRef} />
       </div>
 
-      <form onSubmit={handleSubmit} className="Chatbot_001_input_form">
+      <form onSubmit={handleSubmit} className="Chatbot_003_input_form">
         <textarea
-          className={`Chatbot_001_input_form_text_area ${messages.length > 0 ? "Chatbot_001_input_form_text_area_expanded" : "Chatbot_001_input_form_text_area_contracted"}`}
+          className={`Chatbot_003_input_form_text_area ${messages.length > 0 ? "Chatbot_003_input_form_text_area_expanded" : "Chatbot_003_input_form_text_area_contracted"}`}
           value={userPrompt}
           onChange={handleInputChange}
           spellCheck="false"
           ref={textareaRef}
         />
-        <div className="Chatbot_001_input_form_send_buttons_container">
-          <div className="Chatbot_001_input_form_send_help_buttons_container">
+        <div className="Chatbot_003_input_form_send_buttons_container">
+          <div className="Chatbot_003_input_form_send_help_buttons_container">
             <div
-              className="Chatbot_001_input_form_sample_prompt_button"
-              onClick={handleChatbot_001_input_form_sample_prompt_buttonClick}
+              className="Chatbot_003_input_form_sample_prompt_button"
+              onClick={handleChatbot_003_input_form_sample_prompt_buttonClick}
             >
-              <img src="icons/bolt_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" height="100%" alt="Quick Action Icon" />
+              <img src="brand/icon_quick.svg" height="100%" alt="Quick Action Icon" />
             </div>
             <div
-              className="Chatbot_001_input_form_help_on_what_to_ask_button"
-              onClick={Chatbot_001_input_form_help_on_what_to_ask_buttonClick}
+              className="Chatbot_003_input_form_help_on_what_to_ask_button"
+              onClick={Chatbot_003_input_form_help_on_what_to_ask_buttonClick}
             >
-              <img src="icons/help_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" height="100%" alt="Quick Action Icon" />
+              <img src="brand/icon_help.svg" height="100%" alt="Quick Action Icon" />
             </div>
             <div
-              className="Chatbot_001_input_form_reset_chat_button"
-              onClick={handleChatbot_001_input_form_reset_chat_buttonClick}
+              className="Chatbot_003_input_form_reset_chat_button"
+              onClick={handleChatbot_003_input_form_reset_chat_buttonClick}
             >
-              <img src="icons/delete_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" height="100%" alt="Quick Action Icon" />
+              <img src="brand/icon_delete.svg" height="100%" alt="Quick Action Icon" />
             </div>
           </div>
-          <button type="submit" className="Chatbot_001_input_form_send_button" disabled={isStreaming}>
+          <button type="submit" className="Chatbot_003_input_form_send_button" disabled={isStreaming}>
             {isStreaming ? 'Loading...' : 'Send'}
           </button>
         </div>
@@ -194,4 +194,4 @@ const Chatbot_001: React.FC = () => {
   );
 };
 
-export default Chatbot_001;
+export default Chatbot_003;

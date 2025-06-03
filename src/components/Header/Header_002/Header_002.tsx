@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import "./Header001.css";
+import "./Header_002.css"; 
 
-function Header001() {
+function Header_002() {
    const [menuIsExpanded, setmenuIsExpanded] = React.useState(false)
-   const [currentThemeIsLight, setcurrentThemeIsLight] = React.useState(true)
    const [fontSize, setfontSize] = React.useState(16)
 
    const handleHeader001MenuButtonClick = () => {
@@ -21,13 +20,6 @@ function Header001() {
       document.head.appendChild(tagElement)
    }
 
-   const handleHeader001ThemeButtonClick = () => {
-      setcurrentThemeIsLight((currentThemeIsLight) => !currentThemeIsLight)
-   }
-   React.useEffect(() => {
-      replaceStylesheet("theme_stylesheet", "theme_", currentThemeIsLight ? "light" : "dark")
-   }, [currentThemeIsLight]);
-
    const handleHeader001BiggerButtonClick = () => {
       if (fontSize < 24) {
          setfontSize((fontSize) => fontSize + 2)
@@ -38,9 +30,9 @@ function Header001() {
          setfontSize((fontSize) => fontSize - 2)
       }
    }
-   React.useEffect(() => {
-      replaceStylesheet("fontSize_stylesheet", "font_size_", fontSize)
-   }, [fontSize]);
+      React.useEffect(() => {
+         replaceStylesheet("fontSize_stylesheet", "font_size_", fontSize)
+      }, [fontSize]);
    
    
    const handleLetsTalkButtonClick = () => {
@@ -71,7 +63,7 @@ function Header001() {
    return (
       <>
          <div
-            className="pageHeader Header001"
+            className="Header_002"
          >
             <Link 
             to="/"
@@ -82,31 +74,25 @@ function Header001() {
                >eduardoos.com</p>
             </Link>
             <button
-               className="light_background_strong_foreground lets_talk_button"
+               className="lets_talk_button"
                onClick={handleLetsTalkButtonClick}
             >
                Let's Talk
             </button>
             <button
-               className="light_background_strong_foreground"
-               onClick={handleHeader001ThemeButtonClick}
-            >
-                <img src="/brand/icon_theme_toggle.svg" height="100%"/>
-            </button>
-            <button
-               className="light_background_strong_foreground"
-               onClick={handleHeader001BiggerButtonClick}
-            >
-                <img src="/brand/icon_font_size_increment.svg" height="100%"/>
-            </button>
-            <button
-               className="light_background_strong_foreground"
+               className=""
                onClick={handleHeader001SmallerButtonClick}
             >
                 <img src="/brand/icon_font_size_decrement.svg" height="100%"/>
             </button>
             <button
-               className="light_background_strong_foreground"
+               className=""
+               onClick={handleHeader001BiggerButtonClick}
+            >
+                <img src="/brand/icon_font_size_increment.svg" height="100%"/>
+            </button>
+            <button
+               className=""
                onClick={handleHeader001MenuButtonClick}
             >
                 <img src="/brand/icon_menu.svg" height="100%"/>
@@ -152,4 +138,4 @@ function Header001() {
 }
 
 
-export default Header001
+export default Header_002

@@ -131,6 +131,10 @@
         border-radius: .2dvw;
       }
 
+      .Chatbot_001_input_form_help_on_what_to_ask_button > img {
+        height: 100%;
+      }
+
       .Chatbot_001_input_form_reset_chat_button {
         display: flex;
         align-items: center;
