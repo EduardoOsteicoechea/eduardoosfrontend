@@ -131,6 +131,35 @@ const Chatbot_003: React.FC = () => {
 
   return (
     <div className="Chatbot_003">
+
+      <form onSubmit={handleSubmit} className="Chatbot_003_input_form">
+        <textarea
+          className={`Chatbot_003_input_form_text_area ${messages.length > 0 ? "Chatbot_003_input_form_text_area_expanded" : "Chatbot_003_input_form_text_area_contracted"}`}
+          value={userPrompt}
+          onChange={handleInputChange}
+          spellCheck="false"
+          ref={textareaRef}
+        />
+        <div className="Chatbot_003_input_form_send_buttons_container">
+          <div className="Chatbot_003_input_form_send_help_buttons_container">
+            <div
+              className="Chatbot_003_input_form_button Chatbot_003_input_form_sample_prompt_button"
+              onClick={handleChatbot_003_input_form_sample_prompt_buttonClick}
+            ></div>
+            <div
+              className="Chatbot_003_input_form_button Chatbot_003_input_form_help_on_what_to_ask_button"
+              onClick={Chatbot_003_input_form_help_on_what_to_ask_buttonClick}
+            ></div>
+            <div
+              className="Chatbot_003_input_form_button Chatbot_003_input_form_reset_chat_button"
+              onClick={handleChatbot_003_input_form_reset_chat_buttonClick}
+            ></div>
+          </div>
+          <button type="submit" className="Chatbot_003_input_form_send_button" disabled={isStreaming}>
+            {isStreaming ? 'Loading...' : 'Send'}
+          </button>
+        </div>
+      </form>
       <div
         className={`Chatbot_003_chat_display ${messages.length > 0 ? "Chatbot_003_chat_display_expanded" : "Chatbot_003_chat_display_contracted"}`}
         ref={chatContainerRef}
@@ -155,41 +184,6 @@ const Chatbot_003: React.FC = () => {
         ))}
         <div ref={chatEndRef} />
       </div>
-
-      <form onSubmit={handleSubmit} className="Chatbot_003_input_form">
-        <textarea
-          className={`Chatbot_003_input_form_text_area ${messages.length > 0 ? "Chatbot_003_input_form_text_area_expanded" : "Chatbot_003_input_form_text_area_contracted"}`}
-          value={userPrompt}
-          onChange={handleInputChange}
-          spellCheck="false"
-          ref={textareaRef}
-        />
-        <div className="Chatbot_003_input_form_send_buttons_container">
-          <div className="Chatbot_003_input_form_send_help_buttons_container">
-            <div
-              className="Chatbot_003_input_form_button Chatbot_003_input_form_sample_prompt_button"
-              onClick={handleChatbot_003_input_form_sample_prompt_buttonClick}
-            >
-              {/* <img src="brand/icon_quick.svg" height="100%" alt="Quick Action Icon" /> */}
-            </div>
-            <div
-              className="Chatbot_003_input_form_button Chatbot_003_input_form_help_on_what_to_ask_button"
-              onClick={Chatbot_003_input_form_help_on_what_to_ask_buttonClick}
-            >
-              {/* <img src="brand/icon_help.svg" height="100%" alt="Quick Action Icon" /> */}
-            </div>
-            <div
-              className="Chatbot_003_input_form_button Chatbot_003_input_form_reset_chat_button"
-              onClick={handleChatbot_003_input_form_reset_chat_buttonClick}
-            >
-              {/* <img src="brand/icon_delete.svg" height="100%" alt="Quick Action Icon" /> */}
-            </div>
-          </div>
-          <button type="submit" className="Chatbot_003_input_form_send_button" disabled={isStreaming}>
-            {isStreaming ? 'Loading...' : 'Send'}
-          </button>
-        </div>
-      </form>
     </div>
   );
 };

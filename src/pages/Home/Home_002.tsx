@@ -7,7 +7,7 @@ import "./Home_002.css"
 function Home_002() {
 
    return (
-      <div className="Page_001">
+      <div>
          <Header_002/>
          <Chatbot_003/>
          <Footer_002/>
