@@ -185,12 +185,12 @@
 
     .Chatbot_003_chat_display_expanded {
         height: 85%;
-        padding: 5px;
+        /* padding: 5px; */
     }
 
     .Chatbot_003_chat_display_contracted {
         height: 85%;
-        padding: 10px;
+        /* padding: 10px; */
     }
 
     .Chatbot_003_chat_display {
