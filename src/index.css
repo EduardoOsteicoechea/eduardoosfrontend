@@ -196,7 +196,7 @@ ul {
         overflow-y: auto !important;
         margin: auto;
         border: none !important;
-        height: 100vh;
+        height: 100svh !important;
     }
 }
 
