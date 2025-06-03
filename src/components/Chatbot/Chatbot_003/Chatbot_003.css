@@ -97,6 +97,7 @@
         font-size: .85rem;
         overflow-y: auto;
         border: var(--b1);
+            background: var(--cma3);
     }
 
     .Chatbot_003_input_form_text_area:focus,
@@ -174,7 +175,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        height: 60dvh;
+        height: calc(100dvh - var(--headerHeight));
         max-width: 600px;
         width: 95% !important;
         margin: auto;
@@ -254,11 +255,11 @@
 
 
     .Chatbot_003_input_form {
-        height: 70px;
+        height: 80px;
         display: flex;
         justify-content: space-between;
         margin-top: 0 !important;
-        margin-bottom: 16px;
+        margin-bottom: 7px;
 
         .Chatbot_003_input_form_text_area {
             resize: none;
@@ -272,7 +273,6 @@
             font-size: .85rem;
             overflow-y: auto;
             border: var(--b1);
-            background: rgb(248, 87, 47);
             color: var(--cmb);
         }
 
