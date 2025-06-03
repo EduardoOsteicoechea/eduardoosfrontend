@@ -176,7 +176,7 @@
         flex-direction: column;
         gap: 10px;
         /* height: calc(100svh - var(--headerHeight)); */
-        height: calc(90vh - var(--headerHeight));
+        height: calc(60vh - var(--headerHeight));
         max-width: 600px;
         width: 95% !important;
         margin: auto;
@@ -279,7 +279,8 @@
             font-size: .85rem;
             overflow-y: auto;
             border: var(--b1);
-            color: var(--cmf);
+            /* color: var(--cmf); */
+            color: #000;
         }
 
         .Chatbot_003_input_form_text_area:focus,
