@@ -18,7 +18,7 @@ const Chatbot_003: React.FC = () => {
 
   useEffect(() => {
     if (textareaRef.current) {
-      textareaRef.current.scrollTop = textareaRef.current.scrollHeight;
+    //   textareaRef.current.scrollTop = textareaRef.current.scrollHeight;
     }
   }, [userPrompt, messages]);
 
