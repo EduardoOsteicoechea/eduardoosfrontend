@@ -180,12 +180,12 @@
         width: 93% !important;
         margin: auto;
         border: var(--b1);
-        padding: 7px 5px;
+        padding: 10px;
     }
 
     .Chatbot_003_chat_display_expanded {
         height: 85%;
-        padding: 10px;
+        padding: 5px;
     }
 
     .Chatbot_003_chat_display_contracted {
