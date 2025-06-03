@@ -174,13 +174,13 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        height: 50dvh;
+        height: 60dvh;
         max-width: 600px;
-        width: 93% !important;
+        width: 95% !important;
         margin: auto;
         /* border: var(--b1); */
         border: none;
-        padding: 10px;
+        padding: 0 5px;
     }
 
     .Chatbot_003_chat_display_expanded {
@@ -257,7 +257,8 @@
         height: 70px;
         display: flex;
         justify-content: space-between;
-        margin-top: auto;
+        margin-top: 0 !important;
+        margin-bottom: 16px;
 
         .Chatbot_003_input_form_text_area {
             resize: none;
