@@ -1,5 +1,6 @@
 .Footer_002 {
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     justify-content: center;
     height: var(--footerHeight);

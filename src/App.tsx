@@ -9,14 +9,14 @@ import AHealthyLoneliness from './pages/AHealthyLoneliness';
 import Responding_to_hard_discipline from './pages/Responding_to_hard_discipline/Responding_to_hard_discipline';
 import BeforeTheRoleAndTheTragedy from './pages/BeforeTheRoleAndTheTragedy/BeforeTheRoleAndTheTragedy';
 import MGLearningStart from './pages/MGLearning/MGLearningStart';
-import Home_002 from './pages/Home/Home_002';
+import Home_003 from './pages/Home/Home_003/Home_003';
 
 function App()
 {
    return (
       <BrowserRouter>
          <Routes>
-            <Route path="/" element={<Home_002 />} />
+            <Route path="/" element={<Home_003 />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/singin" element={<SignIn />} />

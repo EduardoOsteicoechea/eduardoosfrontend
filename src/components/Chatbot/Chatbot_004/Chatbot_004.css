@@ -1,0 +1,248 @@
+.Chatbot_004 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
+    /* border: var(--b1); */
+    width: 100%;
+    padding: 10px 10px 100px 10px;
+}
+
+.Chatbot_004_chat_display_expanded {
+    height: 85%;
+    padding: 10px;
+}
+
+.Chatbot_004_chat_display_contracted {
+    height: 85%;
+    padding: 10px;
+}
+
+.Chatbot_004_chat_display {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 16px;
+    border-top-left-radius: .2dvw;
+    border-top-right-radius: .2dvw;
+}
+
+.Chatbot_004_chat_display_message {
+    height: fit-content;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 16px;
+    color: var(--cmb) !important;
+}
+
+.Chatbot_004_chat_display_message_user {
+    height: fit-content;
+    font-size: 1rem;
+    margin-right: 20%;
+    padding: 10px;
+    width: fit-content !important;
+    min-width: 50%;
+    background: var(--cma1);
+    color: var(--cmb) !important;
+}
+
+.Chatbot_004_chat_display_message_assistant {
+    margin-left: 30%;
+    background: var(--cm) !important;
+    background: none;
+    background: var(--cma2) !important;
+    color: var(--cmb) !important;
+}
+
+.Chatbot_004_chat_display_message_content {
+    line-height: 1.5rem;
+    letter-spacing: .051rem;
+    font-size: 1rem;
+    font-family: f1m;
+    background: none;
+    color: var(--cmb) !important;
+    font-family: f1sb;
+}
+
+.Chatbot_004_chat_display_error_message {
+    line-height: 16px;
+    font-size: 1rem;
+}
+
+.Chatbot_004_chat_display_current_message {
+    display: flex;
+    height: fit-content;
+    font-size: 1rem;
+    margin-right: 20%;
+    padding: 10px;
+    width: fit-content !important;
+    min-width: 50%;
+    background: rgb(255, 255, 255);
+    color: var(--cmb) !important;
+    
+}
+
+.Chatbot_004_chat_display_current_message_textarea{
+    background: var(--cma1);
+    color: var(--cmb);
+    padding: 10px;
+    font-size: 1rem;
+    height: 100px;
+    resize: none !important;
+}
+
+.Chatbot_004_chat_display_current_message_button{
+    width: 100px;
+    height: 30px;
+    margin-left: auto;
+    background: var(--cmb);
+    color: var(--cmf);
+}
+
+.Chatbot_004_chat_display_message_subject {
+    line-height: 1rem;
+    font-size: .85rem;
+    font-family: f1l;
+    background: none;
+    color: #000;
+}
+
+.loading_response_container {
+  display: flex; /* Arranges the dots in a row */
+  align-items: center;
+  justify-content: center;
+  height: 20px; /* Adjust as needed */
+  width: fit-content; /* Adjust as needed */
+  background: none;
+}
+
+/* Styling for the individual dots */
+.loading_response_container_dot {
+  width: 8px; /* Size of the circle */
+  height: 8px; /* Size of the circle */
+  background-color: var(--cmb); /* Color of the circles */
+  border-radius: 50%; /* Makes it a circle */
+  margin: 0 4px; /* Spacing between circles */
+  opacity: 0; /* Initially hidden */
+  animation: fadeDot 1.2s infinite ease-in-out; /* Apply the animation */
+}
+
+/* Animation delays for each dot to create a staggered effect */
+.loading_response_container_dot_1 {
+  animation-delay: 0s;
+}
+
+.loading_response_container_dot_2 {
+  animation-delay: 0.2s; /* Delay for the second dot */
+}
+
+.loading_response_container_dot_3 {
+  animation-delay: 0.4s; /* Delay for the third dot */
+}
+
+/* Keyframes for the appearing and disappearing animation */
+@keyframes fadeDot {
+  0%, 80%, 100% {
+    opacity: 0; /* Hidden at the start, near end, and end */
+  }
+  40% {
+    opacity: 1; /* Fully visible in the middle of the animation */
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 620px) {
+
+    .Chatbot_004 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* height: calc(100svh - var(--headerHeight)); */
+        height: calc(100svh - var(--headerHeight));
+        max-width: 600px;
+        width: 95% !important;
+        margin: auto;
+        border: none;
+        padding: 0 5px 50px 5px;
+
+    }
+
+    .Chatbot_004_chat_display_expanded {
+        height: 85%;
+        /* padding: 5px; */
+    }
+
+    .Chatbot_004_chat_display_contracted {
+        height: 85%;
+        /* padding: 10px; */
+    }
+
+    .Chatbot_004_chat_display {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 8px;
+        padding: 0;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: 340px;
+        /* margin-top: 80px; */
+    }
+
+    .Chatbot_004_chat_display_message {
+        height: fit-content;
+        font-size: .85rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+
+    }
+
+    .Chatbot_004_chat_display_message_user {
+        height: fit-content;
+        font-size: .85rem;
+        margin-right: 10%;
+        padding: 10px;
+        width: fit-content !important;
+        min-width: 30%;
+        background: var(--cma1);
+    }
+
+    .Chatbot_004_chat_display_message_assistant {
+        margin-left: 10%;
+        background: var(--cm) !important;
+        background: none;
+        background: var(--cma2) !important;
+    }
+
+    .Chatbot_004_chat_display_message_subject {
+        line-height: 1rem;
+        font-size: .75rem;
+        font-family: f1l;
+        background: none;
+        color: #000;
+    }
+
+    .Chatbot_004_chat_display_message_content {
+        line-height: 1.35rem;
+        letter-spacing: .051rem;
+        font-size: 1rem;
+        font-family: f1m;
+        background: none;
+        color: #000;
+    }
+
+    .Chatbot_004_chat_display_error_message {
+        line-height: 16px;
+        font-size: 1rem;
+    }
+
+
+}
