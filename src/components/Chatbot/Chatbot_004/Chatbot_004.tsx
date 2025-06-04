@@ -34,21 +34,6 @@ const Chatbot_004: React.FC = () => {
         }
     }
 
-    const handleChatbot_004_input_form_sample_prompt_buttonClick = () => {
-        setUserPrompt("Please resume Eduardo's professional profile");
-        focusTextArea();
-    }
-
-    const handleChatbot_004_input_form_reset_chat_buttonClick = () => {
-        setUserPrompt("");
-        focusTextArea();
-    }
-
-    const Chatbot_004_input_form_help_on_what_to_ask_buttonClick = () => {
-        window.open('https://eduardoos.com', '_blank');
-        focusTextArea();
-    }
-
     useEffect(() => {
         focusTextArea();
     }, [messages]);
