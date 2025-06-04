@@ -64,6 +64,7 @@
     font-family: f1m;
     background: none;
     color: var(--cmb) !important;
+    color: #000 !important;
     font-family: f1sb;
 }
 
