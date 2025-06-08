@@ -101,6 +101,7 @@
         --cma2: rgb(27, 199, 185);
         --cma3: rgb(227, 227, 227);
         --cma4: rgb(255, 251, 0);
+        --cma5: rgb(0, 255, 255);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;

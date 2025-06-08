@@ -193,6 +193,11 @@
   font-size: 1rem !important;
 }
 
+.extended_explanation_key_phrase {
+  color: var(--cma5) !important;
+  font-family: f1sb !important;
+}
+
 .extended_explanation_biblical_passage {
   color: var(--cma4) !important;
   font-family: f1sb !important;
