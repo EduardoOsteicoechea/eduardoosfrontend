@@ -1,6 +1,7 @@
-import Chatbot_003 from "../../components/Chatbot/Chatbot_003/Chatbot_003";
-import Footer_002 from "../../components/Footer/Footer_002/Footer_002";
-import Header_002 from "../../components/Header/Header_002/Header_002";
+
+import Chatbot_003 from "../../../components/Chatbot/Chatbot_003/Chatbot_003";
+import Footer_002 from "../../../components/Footer/Footer_002/Footer_002";
+import Header_002 from "../../../components/Header/Header_002/Header_002";
 import "./Home_002.css"
 
 
