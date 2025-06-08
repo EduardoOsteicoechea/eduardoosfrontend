@@ -120,7 +120,7 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
 
                   <div
                     id={`idea_${ideaIndex}_content_container`}
-                    className="idea_content_container visible"
+                    className="idea_content_container hidden"
                   >
                     {
                       i.subideas.map((si, subIdeaIndex) => {
