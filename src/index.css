@@ -90,6 +90,7 @@
 
 :root {
     font-size: 15px;
+    letter-spacing: 1px;
     font-family: f1r, system-ui;
     
         --cmb: #fff;
@@ -99,6 +100,7 @@
         --cma1: rgb(255, 214, 29);
         --cma2: rgb(27, 199, 185);
         --cma3: rgb(227, 227, 227);
+        --cma4: rgb(255, 251, 0);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;

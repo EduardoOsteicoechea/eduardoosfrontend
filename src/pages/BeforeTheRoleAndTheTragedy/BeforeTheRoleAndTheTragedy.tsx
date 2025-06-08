@@ -1,17 +1,12 @@
-import Article_001 from "../../components/Article_001/Article_001";
-import Footer001 from "../../components/Footer/Footer001/Footer001";
-import Header001 from "../../components/Header/Header001";
-import "./BeforeTheRoleAndTheTragedy.css"
+import Article_001 from "../../components/Article/Article_001/Article_001";
+import Footer_002 from "../../components/Footer/Footer_002/Footer_002";
+import Header_002 from "../../components/Header/Header_002/Header_002";
 
-export default () => {
-
-  return (
-    <div className="page">
-      <Header001 />
-      <Article_001 
-      url="https://eduardoos.com/static_data/between_the_role_and_the_tragedy/article_rich_data" 
-      />
-      <Footer001 />
-    </div>
-  );
-}
+export default () => (
+  <div className="page">
+    <Header_002 />
+    <Article_001
+      url="https://eduardoos.com/static_data/between_the_role_and_the_tragedy/article_rich_data" />
+    <Footer_002 />
+  </div>
+)

@@ -100,7 +100,7 @@ const Chatbot_004: React.FC = () => {
                         return response.text();
                     })
                     .then(data => {
-                        // console.log('Data received:', data);
+                        console.log('Data received:', data);
                         const responseMessage: DeepSeekChatMessage = {
                             role: 'assistant',
                             content: data
@@ -156,9 +156,9 @@ const Chatbot_004: React.FC = () => {
                                     `Assistant (${currentTime})`
                             }
                         </strong>
-                        <p className="Chatbot_004_chat_display_message_content">
+                        <div className="Chatbot_004_chat_display_message_content">
                             {messageObject.content}
-                        </p>
+                        </div>
                     </div>
                 ))}
 
