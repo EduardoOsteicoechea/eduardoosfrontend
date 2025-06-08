@@ -269,12 +269,12 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
                           </div>;
                         }
 
-                        // return <p key={ideaIndex}>
-                        //   {si.text}
-                        //   <span className="biblicalPassageReference">
-                        //     {rbr}
-                        //   </span>
-                        // </p>;
+                        return <p key={ideaIndex}>
+                          {si.text}
+                          <span className="biblicalPassageReference">
+                            {rbr}
+                          </span>
+                        </p>;
                       }
                       )}
                   </div>
