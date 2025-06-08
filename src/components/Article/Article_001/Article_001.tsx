@@ -84,7 +84,7 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
           <section className="reference_to_article_headings_section">
             <h2 className="Article_001_section_heading">Ideas</h2>
             <ul className="reference_to_article_heading_list">
-              {ideas?.map((i, index) => <li key={index}><span className="reference_to_article_heading_list_item_number">{index + 1}. </span><a className="reference_to_article_heading" href={"#" + i}>{i}</a></li>)}
+              {ideas?.map((mainIdea, index) => <li key={index}><span className="reference_to_article_heading_list_item_number">{index + 1}. </span><a className="reference_to_article_heading" href={`#main_idea_${index}`}>{mainIdea}</a></li>)}
             </ul>
           </section>
 
@@ -95,7 +95,7 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
                 <div key={ideaIndex} className="ArticleIdea">
                   <h2
                     key={ideaIndex}
-                    id={`idea_${ideaIndex}_heading`}
+                    id={`main_idea_${ideaIndex}`}
                     className="ArticleIdeaHeading"
                   >
                     <input
@@ -269,12 +269,12 @@ const Article_001: React.FC<Article_001_Props> = ({ url }) => {
                           </div>;
                         }
 
-                        return <p key={ideaIndex}>
-                          {si.text}
-                          <span className="biblicalPassageReference">
-                            {rbr}
-                          </span>
-                        </p>;
+                        // return <p key={ideaIndex}>
+                        //   {si.text}
+                        //   <span className="biblicalPassageReference">
+                        //     {rbr}
+                        //   </span>
+                        // </p>;
                       }
                       )}
                   </div>
